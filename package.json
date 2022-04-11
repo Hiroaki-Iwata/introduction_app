@@ -1,15 +1,31 @@
 {
-  "name": "nodeTest",
+  "name": "intro",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
-  "private": true,
+  "main": ".eslintrc.js",
   "scripts": {
-    "lint": "eslint src"
-},
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hiroaki-Iwata/introduction_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hiroaki-Iwata/introduction_app/issues"
+  },
+  "homepage": "https://github.com/Hiroaki-Iwata/introduction_app#readme",
+  "dependencies": {
+    "phaser": "^3.55.2"
+  },
   "devDependencies": {
-    "eslint": "^8.13.0",
-    "ts-node": "10.7.0",
-    "typescript": "4.6.3"
+    "copy-webpack-plugin": "^10.2.4",
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.3",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
   }
 }
