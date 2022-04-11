@@ -1,3 +1,4 @@
-.vscode
-.eslintrc.js
-.eslintrc.json
+/.vscode/
+/.eslintrc.js/
+/.eslintrc.json/
+/ignore/
