@@ -1,35 +1,27 @@
 import { Timelines } from '../type/Timelines';
 
 export const timelineData: Timelines = {
-  start: [
-    {type: 'dialog', text: '・・・・・・ ▼'},
-    {type: 'dialog', text: 'う、うーん・・・ ▼'},
-    {type: 'setBackground', x: 400, y: 300, key: 'street'},
-    {type: 'dialog', text: 'ここは・・・？ ▼'},
-    {type: 'addForeground', x: 400, y: 300, key: 'robot'},
-    {type: 'dialog', text: '目が覚めましたか ▼'},
-    {type: 'dialog', text: 'アンドロイド・・・？ ▼'},
-    {type: 'dialog', text: '私は「ACT-42」 ▼'},
-    {type: 'dialog', text: '早速ですが—— ▼'},
-    {type: 'dialog', text: 'あなたは追われています ▼'},
-    {type: 'dialog', text: '一刻も早くここから逃げた方がいい ▼'},
-    {type: 'timelineTransition', timelineID: 'choice01'}
-  ],
-  choice01: [
-    {type: 'setBackground', x: 400, y: 300, key: 'street'},
-    {type: 'addForeground', x: 400, y: 300, key: 'robot'},
-    {type: 'dialog', text: '一緒に逃げましょう ▼'},
-    {type: 'choice', choices: [
-      {text: 'はい', timelineID: 'choice01_a01'},
-      {text: 'いいえ', timelineID: 'choice01_a02'},
-      {text: 'アンドロイド風情が話しかけるな', timelineID: 'choice01_a03'}
+    start: [
+        {type: 'dialog',text:'どのシナリオをプレイしますか？▼'},
+/*         {type: 'setBackground', x: 400, y: 300, key: 'street'},
+        {type: 'addForeground', x: 400, y: 300, key: 'robot'},
+        {type: 'dialog', text: '一刻も早くここから逃げた方がいい ▼'},*/
+        {type: 'timelineTransition', timelineID: 'choice01'},
+    ],
+    choice01: [
+        {type: 'setBackground', x: 400, y: 300, key: 'street'},
+        {type: 'addForeground', x: 400, y: 300, key: 'robot'},
+        {type: 'choice', choices: [
+            {text: '小学生編', timelineID: 'choice01_a01'},
+            {text: '中学生編', timelineID: 'choice01_a02'},
+            {text: '高校生編', timelineID: 'choice01_a03'}
     ]}
   ],
   choice01_a01: [
     {type: 'setBackground', x: 400, y: 300, key: 'street'},
     {type: 'addForeground', x: 400, y: 300, key: 'robot'},
     {type: 'dialog', text: '事情はつかめないけどとりあえず従っておこう ▼'},
-    {type: 'dialog', text: 'よろしい。ではこちらへ来てください ▼'},
+    {type: 'dialog', text: 'よろしい。ではこちらへ来てください ▼',actorName: 'ACT-42'},
     {type: 'clearForeground'},
     {type: 'dialog', text: 'こうして銀河を股にかけた物語が始まるのであった・・・ ▼'},
     {type: 'sceneTransition', key: 'ending'}

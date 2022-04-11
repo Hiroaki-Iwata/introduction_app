@@ -125,8 +125,15 @@ export class TimelinePlayer {
     const timelineEvent = this.timeline[this.timelineIndex++];
 
     switch (timelineEvent.type) {
-      case 'dialog':  // ダイアログイベント
-        this.dialogBox.setText(timelineEvent.text);
+        case 'dialog':  // ダイアログイベント
+            if (timelineEvent.actorName) {
+            // actorNameが設定されていたら名前を表示
+            this.dialogBox.setActorNameText(timelineEvent.actorName);
+            } else {
+            // actorNameが設定されていなかったら名前を非表示
+            this.dialogBox.clearActorNameText();
+            }
+            this.dialogBox.setText(timelineEvent.text);
         break;
 
       case 'setBackground':  // 背景設定イベント
