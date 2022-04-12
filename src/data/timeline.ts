@@ -64,7 +64,6 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '俺は移動教室の時、男子の集団から離れて移動していた。 ▼'},
     {type: 'dialog', text: 'なんでお前だけ離れてんの？',actorName:'クラスの男子'},
     {type: 'dialog', text: 'クラスの奴から声をかけられた。'},
-    //{type: 'dialog', text: ''},
     {type: 'timelineTransition', timelineID: 'choice_kou01'}
   ],
   choice_kou01:[
@@ -91,12 +90,13 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '（机に頭叩きつけたいです。あと叫びたい。）'},
     {type: 'timelineTransition', timelineID: 'kou02'}
   ],
+
   kou02: [//無限課金の章
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'dialog', text: '高校2年の授業中、俺は隠れてスマホのゲームをしていた。'},
-    //{type: 'setBackground', x: 400, y: 300, key: 'r_class'},//デレステの画像に変更
+    //{type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    //TODO デレステの画像に変更
     {type: 'dialog', text: 'うわ、ウエディング衣装じゃん。これは引きたい！',actorName:'高校生岩田'},
-    //{type: 'dialog', text: ''},
     {type: 'timelineTransition', timelineID: 'choice_kou'}
   ],
   choice_kou02:[
@@ -125,6 +125,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '(課金はほどほどに、授業真面目に聞きましょう。先生ごめんなさい)'},
     {type: 'timelineTransition', timelineID: 'kou03'}
   ],
+
   kou03: [//花火大会チキンの章
     {type: 'setBackground', x: 400, y: 300, key: 'hanabi'},
     {type: 'dialog', text: '好きな子を交えて男女4人で花火大会に行くことになった。'},
@@ -159,6 +160,48 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '（チキン男は卒業しようと思います）'},
     {type: 'timelineTransition', timelineID: 'kou04'}
   ],
+
+  kou04: [//悪夢のコーヒーカップの章
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'dialog', text: '男女5人で遊園地に行った時のこと。'},
+    {type: 'dialog', text: 'ジャンケンで負けた2人がコーヒーカップに乗って全力で回すという罰ゲームが開催された。'},
+    {type: 'dialog', text: '負けてしまったが、好きな子と2人で乗ることになった！'},
+    //{type: 'dialog', text: ''},
+    {type: 'timelineTransition', timelineID: 'choice_kou04'}
+  ],
+  choice_kou04:[
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'dialog', text: 'どうしよう？'},
+    {type: 'choice', choices: [
+      {text: 'さすがに全力で回すのはかわいそうだ。手を抜こう', timelineID: 'kou04_x'},
+      {text: 'よっしゃ！罰ゲームだし全力で行くぜ！', timelineID: 'kou04_o'},
+    ]}
+  ],
+  kou04_x:[
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'dialog', text: '手を抜こうかな？'},
+    {type: 'dialog', text: 'うーん、でもそれじゃあつまらないよな！'},
+    {type: 'timelineTransition', timelineID: 'choice_kou04'}
+  ],
+  kou04_o:[
+    {type: 'setBackground', x: 400, y: 300, key: 'coffee_cup'},
+    {type: 'dialog', text: '回せ回せ！！！！！！',actorName:'高校生岩田'},
+    {type: 'dialog', text: '調子に乗った俺は、何も考えずにコーヒーカップをぶん回した。'},
+    {type: 'dialog', text: '・・・・・'},
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'dialog', text: 'どうやら、俺が回しすぎたせいで気分が悪くなったようだ。'},
+    {type: 'dialog', text: '他の人はジェットコースターに乗りに行ったが、その子は休むと言う。'},
+    {type: 'dialog', text: '大丈夫？',actorName:'高校生岩田'},
+    //TODO 白黒ルスツ画像にする？
+    {type: 'dialog', text: ' お 前 の せ い だ ',actorName:'女子M'},
+    {type: 'dialog', text: 'この日はそれ以降、世界の終わりが来たような顔をしていたそうだ。'},
+    {type: 'dialog', text: '（ノリで調子こくのはやめました）'},
+    {type: 'sceneTransition', key: 'ending'}
+  ],
+
+
+
+
 
 }
 
@@ -216,4 +259,5 @@ kou02_o:[
   {type: 'dialog', text: ''},
   {type: 'dialog', text: ''},
   {type: 'timelineTransition', timelineID: 'kou03'}
+  ],
     */
