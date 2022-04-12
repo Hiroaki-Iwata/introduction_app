@@ -17,16 +17,16 @@ export const timelineData: Timelines = {
             {text: '高校生編', timelineID: 'choice01_a03'}
     ]}
   ],
-  choice01_a01: [
+  choice01_a01: [//小学生編開始
     {type: 'setBackground', x: 400, y: 300, key: 'street'},
     {type: 'addForeground', x: 400, y: 300, key: 'robot'},
     {type: 'dialog', text: '事情はつかめないけどとりあえず従っておこう ▼'},
     {type: 'dialog', text: 'よろしい。ではこちらへ来てください ▼',actorName: 'ACT-42'},
-    {type: 'clearForeground'},
+    //{type: 'clearForeground'},
     {type: 'dialog', text: 'こうして銀河を股にかけた物語が始まるのであった・・・ ▼'},
     {type: 'sceneTransition', key: 'ending'}
   ],
-  choice01_a02: [
+  choice01_a02: [//中学生編開始
     {type: 'setBackground', x: 400, y: 300, key: 'street'},
     {type: 'addForeground', x: 400, y: 300, key: 'robot'},
     {type: 'dialog', text: '・・・困りましたね ▼'},
@@ -35,7 +35,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'もう一度聞きますね？ ▼'},
     {type: 'timelineTransition', timelineID: 'choice01'}
   ],
-  choice01_a03: [
+  choice01_a03: [//高校生編開始
     {type: 'setBackground', x: 400, y: 300, key: 'street'},
     {type: 'addForeground', x: 400, y: 300, key: 'robot'},
     {type: 'dialog', text: '・・・・・・ ▼'},
@@ -52,4 +52,5 @@ startというタイムラインを作るのと、
 各タイムラインの最後は必ず
 choice か timelineTransition か sceneTransition で
 終わるようにすればあとは自由
+画像はassets に入れて loadingScene.ts に書けばおk
 */
