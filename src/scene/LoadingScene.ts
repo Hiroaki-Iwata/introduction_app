@@ -33,7 +33,10 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('r_hall','assets/r_hall.jpg');
       this.load.image('soen','assets/soen.jpg');
       this.load.image('desk','assets/desk.jpg');
+      this.load.image('mother','assets/mother.jpg');
       //this.load.image('','assets/.jpg');
+      //TODO:一個のスプライト画像にして読み込みを高速化する
+      //TODO:余力があればHerokuにデプロイしてCDNを利用する
 
 
       // アセットのロードが完了したらTitleSceneに遷移
