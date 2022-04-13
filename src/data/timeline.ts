@@ -10,15 +10,16 @@ export const timelineData: Timelines = {
   ],
   choice_scenario: [//シナリオ選択
     {type: 'choice', choices: [
-      {text: '小学生編', timelineID: 'syo01'},
-      {text: '中学生編', timelineID: 'chu01'},
-      {text: '高校生編', timelineID: 'kou01'}
+      {text: '小学生の章', timelineID: 'syo01'},
+      {text: '中学生の章', timelineID: 'chu01'},
+      {text: '高校生の章', timelineID: 'kou01'}
     ]}
   ],
-  syo01: [//小学生編開始
+  syo01: [//小学生開始_ヒロインの名前編
     {type: 'fadeOut'},
-    {type: 'fadeIn'},
     {type: 'setBackground', x: 400, y: 300, key: 'mother'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '---ヒロインの名前編---'},
     {type: 'dialog', text: 'MOTHER2やろうっと ▼',actorName: '小学生岩田'},
     {type: 'dialog', text: '僕はMOTHER2のカセットをフーフーして、スーパーファミコンを起動した。▼'},
     {type: 'dialog', text: 'ヒロインの名前かぁ▼',actorName: '小学生岩田'},
@@ -42,13 +43,13 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'mother'},
     {type:'dialog', text: '好きな子の名前つけちゃおう！ヒロインだし。', actorName: '小学生岩田'},
     {type:'dialog', text: 'その後、ゲームと現実の差で虚しさがこみ上げてきた。'},
-    {type:'dialog', text: '（安易にギャルゲーに自分の名前つけると虚しくなりますよ）'},
+    {type: 'dialog', text: '---ヒロインの名前編 END---'},
     {type: 'timelineTransition', timelineID: 'syo02'}
   ],
 
 
 
-  chu01: [//中学生編開始
+  chu01: [//中学生開始
     {type: 'setBackground', x: 400, y: 300, key: 'street'},
     {type: 'addForeground', x: 400, y: 300, key: 'robot'},
     {type: 'dialog', text: '・・・困りましたね ▼'},
@@ -61,7 +62,10 @@ export const timelineData: Timelines = {
 
 
   kou01: [//高校生編開始_尖ってる岩田くんの章
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_hall'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '---尖ってる岩田くん編---'},
     {type: 'dialog', text: '・・・・・・ ▼'},
     {type: 'dialog', text: '高校一年生の入学したての頃だった。 ▼'},
     {type: 'dialog', text: '俺は移動教室の時、男子の集団から離れて移動していた。 ▼'},
@@ -88,14 +92,16 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'r_hall'},
     {type: 'dialog', text: 'いや、お前らと友達だと思われたくないんだよね'},
     {type: 'dialog', text: 'ドヤ顔で言った。'},
-    {type: 'dialog', text: '（今も高校の人とは仲がいいのですが、当時は尖ってました。）'},
-    {type: 'dialog', text: '（今振り返ると恥ずかしくてしょうがないです。本当に。）'},
-    {type: 'dialog', text: '（机に頭叩きつけたいです。あと叫びたい。）'},
+    {type: 'dialog', text: '空気が凍りついた・・・'},
+    {type: 'dialog', text: '---尖ってる岩田くん編 END---'},
     {type: 'timelineTransition', timelineID: 'kou02'}
   ],
 
   kou02: [//無限課金の章
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '---課金倍プッシュ編---'},
     {type: 'dialog', text: '高校2年の授業中、俺は隠れてスマホのゲームをしていた。'},
     //{type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     //TODO デレステの画像に変更
@@ -122,15 +128,20 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '・・・・・'},
     {type: 'dialog', text: 'もうこれで限界!3万!!!',actorName:'高校生岩田'},
     {type: 'dialog', text: '出なかった・・・・',actorName:'高校生岩田'},
+    {type: 'fadeOut'},
+    {type: 'fadeIn'},
     {type: 'dialog', text: '--授業後--'},
     {type: 'dialog', text: 'どした？そんなうなだれて。そんな凹む授業じゃないだろ。',actorName:'クラスメイト'},
     {type: 'dialog', text: '授業中課金して爆死したんだわ・・・',actorName:'高校生岩田'},
-    {type: 'dialog', text: '(課金はほどほどに、授業真面目に聞きましょう。先生ごめんなさい)'},
+    {type: 'dialog', text: '---課金倍プッシュ編　END---'},
     {type: 'timelineTransition', timelineID: 'kou03'}
   ],
 
   kou03: [//花火大会チキンの章
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'hanabi'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '---花火大会チキン編---'},
     {type: 'dialog', text: '好きな子を交えて男女4人で花火大会に行くことになった。'},
     {type: 'dialog', text: '当日、天気がいいとはいえず、花火が始まる前に雨が降ってきた。'},
     {type: 'dialog', text: '傘持ってきてないぞ。',actorName:'高校生岩田'},
@@ -157,19 +168,23 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'hanabi'},
     {type: 'dialog', text: 'それから俺は、機嫌を取ることに終始していた'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'fadeOut'},
+    {type: 'fadeIn'},
     {type: 'dialog', text: '---後日---'},
     {type: 'dialog', text: 'なんで2人きりにしたのにデートも誘わないんだ!',actorName:'友人T'},
     {type: 'dialog', text: 'しこたま怒られた。'},
-    {type: 'dialog', text: '（チキン男は卒業しようと思います）'},
+    {type: 'dialog', text: '---花火大会チキン編　END---'},
     {type: 'timelineTransition', timelineID: 'kou04'}
   ],
 
   kou04: [//悪夢のコーヒーカップの章
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '---コーヒーカップ無限回転編---'},
     {type: 'dialog', text: '男女5人で遊園地に行った時のこと。'},
     {type: 'dialog', text: 'ジャンケンで負けた2人がコーヒーカップに乗って全力で回すという罰ゲームが開催された。'},
     {type: 'dialog', text: '負けてしまったが、好きな子と2人で乗ることになった！'},
-    //{type: 'dialog', text: ''},
     {type: 'timelineTransition', timelineID: 'choice_kou04'}
   ],
   choice_kou04:[
@@ -187,18 +202,24 @@ export const timelineData: Timelines = {
     {type: 'timelineTransition', timelineID: 'choice_kou04'}
   ],
   kou04_o:[
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'coffee_cup'},
+    {type: 'fadeIn'},
     {type: 'dialog', text: '回せ回せ！！！！！！',actorName:'高校生岩田'},
     {type: 'dialog', text: '調子に乗った俺は、何も考えずにコーヒーカップをぶん回した。'},
     {type: 'dialog', text: '・・・・・'},
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'fadeIn'},
     {type: 'dialog', text: 'どうやら、俺が回しすぎたせいで気分が悪くなったようだ。'},
     {type: 'dialog', text: '他の人はジェットコースターに乗りに行ったが、その子は休むと言う。'},
     {type: 'dialog', text: '大丈夫？',actorName:'高校生岩田'},
+    {type: 'dialog', text: '俺が聞いた、その時だった。'},
     //TODO 白黒ルスツ画像にする？
     {type: 'dialog', text: ' お 前 の せ い だ ',actorName:'女子M'},
+    {type: 'dialog', text: '真顔で、しかも聞いたこともない声色だった。'},
     {type: 'dialog', text: 'この日はそれ以降、世界の終わりが来たような顔をしていたそうだ。'},
-    {type: 'dialog', text: '（ノリで調子こくのはやめました）'},
+    {type: 'dialog', text: '---コーヒーカップ無限回転編　END---'},
     {type: 'sceneTransition', key: 'ending'}
   ],
 
