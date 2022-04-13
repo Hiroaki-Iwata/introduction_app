@@ -1,5 +1,6 @@
 import { Timelines } from '../type/Timelines';
 
+
 //TODO:文字を１文字ずつ表示するようにする
 
 export const timelineData: Timelines = {
@@ -15,6 +16,8 @@ export const timelineData: Timelines = {
     ]}
   ],
   syo01: [//小学生編開始
+    {type: 'fadeOut'},
+    {type: 'fadeIn'},
     {type: 'setBackground', x: 400, y: 300, key: 'mother'},
     {type: 'dialog', text: 'MOTHER2やろうっと ▼',actorName: '小学生岩田'},
     {type: 'dialog', text: '僕はMOTHER2のカセットをフーフーして、スーパーファミコンを起動した。▼'},
@@ -97,7 +100,7 @@ export const timelineData: Timelines = {
     //{type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     //TODO デレステの画像に変更
     {type: 'dialog', text: 'うわ、ウエディング衣装じゃん。これは引きたい！',actorName:'高校生岩田'},
-    {type: 'timelineTransition', timelineID: 'choice_kou'}
+    {type: 'timelineTransition', timelineID: 'choice_kou02'}
   ],
   choice_kou02:[
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},

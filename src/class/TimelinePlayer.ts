@@ -7,7 +7,6 @@ export class TimelinePlayer {
   private foregroundLayer: Phaser.GameObjects.Container;
   private uiLayer: Phaser.GameObjects.Container;
   private hitArea: Phaser.GameObjects.Zone;
-
   private timeline?: Timeline;
   private timelineIndex = 0;
 
@@ -155,6 +154,18 @@ export class TimelinePlayer {
         // シーンをリスタートし、指定のタイムラインを実行する
         // restart()の引数がシーンのinit()の引数に渡される
         this.scene.scene.restart({ timelineID: timelineEvent.timelineID });
+        break;
+
+      case 'fadeOut':  //フェードアウト実行
+        this.scene.cameras.main.fadeOut(1000, 0, 0, 0);
+        this.scene.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
+          this.next();//フェードアウト完全に実行してから次にいく
+        });
+        break;
+
+      case 'fadeIn':  //フェードイン実行
+        this.scene.cameras.main.fadeIn(1500, 0, 0, 0);
+        this.next();
         break;
 
       case 'sceneTransition':  // シーン遷移イベント

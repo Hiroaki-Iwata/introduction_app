@@ -47,5 +47,13 @@ type ChoiceEvent = {
   choices: Choice[]
 };
 
+type FadeOutEvent = {
+  type: 'fadeOut',
+};
+
+type FadeInEvent = {
+  type: 'fadeIn',
+};
+
 // Timelineはイベントの配列
-export type Timeline = (DialogEvent|SetBackgroundEvent|AddForegroundEvent|ClearForegroundEvent|TimelineTransitionEvent|SceneTransitionEvent|ChoiceEvent)[];
+export type Timeline = (DialogEvent|SetBackgroundEvent|AddForegroundEvent|ClearForegroundEvent|TimelineTransitionEvent|SceneTransitionEvent|ChoiceEvent|FadeOutEvent|FadeInEvent)[];
