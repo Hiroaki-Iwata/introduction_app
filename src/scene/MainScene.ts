@@ -33,8 +33,10 @@ export class MainScene extends Phaser.Scene {
     const { width, height } = this.game.canvas;
 
     const textStyle: Phaser.Types.GameObjects.Text.TextStyle = {
-      fontFamily: '"Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif',
-      fontSize: '24px'
+      fontFamily: '"DotGothic16","Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif',
+      fontSize: '26px',
+      padding:{x:8,y:8},
+      //rtl:true
     };
 
     const dialogBoxHeight = 150;
