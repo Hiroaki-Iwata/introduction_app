@@ -24,7 +24,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'MOTHER2やろうっと ▼',actorName: '小学生岩田'},
     {type: 'dialog', text: '僕はMOTHER2のカセットに息を吹きかけて本体に挿し、スーパーファミコンを起動した。▼'},
     {type: 'dialog', text: 'ヒロインの名前かぁ▼',actorName: '小学生岩田'},
-    {type: 'dialog', text: '金髪の超能力使い',actorName: '小学生岩田'},
+    //{type: 'dialog', text: '金髪の超能力使い',actorName: '小学生岩田'},
     {type: 'timelineTransition', timelineID: 'choice_syo01'},
   ],
   choice_syo01: [//小学生：ヒロイン名前どうする
@@ -87,6 +87,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'み○みちゃんのことは好きだけど、1人選ぶなんてできないよ！',actorName:'小学生岩田'},
     {type: 'dialog', text: '謎の正義感（？）により、全員振ってしまった岩田。'},
     {type: 'dialog', text: '好きな子からは避けられ、このことをしばらく後悔したのだった・・・'},
+    {type: 'dialog', text: '-----謎の正義感編 END-----'},
     {type: 'timelineTransition', timelineID: 'syo03'}
     ],
   // syo03: [//ボウリングゲーム編
@@ -132,6 +133,7 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
     {type: 'fadeIn'},
     //{type: 'addForeground', x: 400, y: 300, key: 'robot'},
+    {type: 'dialog', text: '-----勘違い男編-----'},
     {type: 'dialog', text: '中学に入って女子とはあまり喋る機会は多くなかった。'},
     {type: 'dialog', text: 'しかし最近、仲良く喋ってくれる女子ができた。'},
     {type: 'dialog', text: 'LINEの返信も早く、お互い楽しんでいる自信があった。'},
@@ -148,18 +150,110 @@ export const timelineData: Timelines = {
   ],
   chu01_x:[
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
-    {type: 'dialog', text: '俺って罪な男だなあ！',actorName:'中学生岩田'},
-    {type: 'dialog', text: 'いやもう付き合ってもいいけどね？俺は。',actorName:'中学生岩田'},
-    {type: 'dialog', text: 'これはもう告白したら余裕だな！！',actorName:'中学生岩田'},
+    {type: 'dialog', text: '単純に友達として仲がいいだけ・・・'},
+    {type: 'dialog', text: 'と言う考えは全然頭になかった。'},
+    {type: 'dialog', text: '頭の中はもうピンク一色だった'},
+    //{type: 'dialog', text: ''},
+    //{type: 'dialog', text: ''},
     {type: 'timelineTransition', timelineID: 'chu01_o'}
   ],
   chu01_o:[
-    {type: 'setBackground', x: 400, y: 300, key: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: '',actorName:''},
-    {type: 'dialog', text: '',actorName:''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: '俺って罪な男だなあ！',actorName:'中学生岩田'},
+    {type: 'dialog', text: 'いやもう付き合ってもいいけどね？俺は。',actorName:'中学生岩田'},
+    {type: 'dialog', text: 'これはもう告白したら余裕だな！！',actorName:'中学生岩田'},
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: 'その後、本当にただの勘違いで、友達として仲良くしてくれていただけだったことがわかった・・・。'},
+    //{type: 'dialog', text: ''},
+    //頭抱えてる岩田挿入
+    //何秒か静止
+    {type: 'dialog', text: '-----勘違い男編　END-----'},
+    {type: 'sceneTransition', key: 'chu02'}
+    ],
+  chu02: [//キャラなりきり編
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'fadeIn'},
+    //{type: 'addForeground', x: 400, y: 300, key: 'robot'},
+    {type: 'dialog', text: '-----キャラなりきり編-----'},
+    {type: 'dialog', text: '中学では、朝に読書の時間があった。'},
+    {type: 'dialog', text: '硬派な文学なんて俺は読めないから、ライトノベルを読もう！',actorName:'中学生岩田'},
+    //変猫の画像を入れる
+
+    {type: 'timelineTransition', timelineID: 'choice_chu02'}
+  ],
+  choice_chu02:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: '変態紳士・・・？',actorName:'中学生岩田'},
+    {type: 'choice', choices: [
+      {text: 'このキャラウケる、俺も変態紳士キャラで行こう！', timelineID: 'chu02_o'},
+      {text: 'こんなのウケるはずないよ。反面教師にしよう。', timelineID: 'chu02_x'},
+    ]}
+  ],
+  chu02_x:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: 'こんなのウケるはずがない。'},
+    {type: 'dialog', text: '・・・と、普通の人なら思うだろう。'},
+    {type: 'dialog', text: '中坊の岩田はおめでたい脳みそをしていたのだ！'},
+    //{type: 'dialog', text: ''},
+    //{type: 'dialog', text: ''},
+    {type: 'timelineTransition', timelineID: 'choice_chu02'}
+  ],
+  chu02_o:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: 'ロウきゅーぶの主人公、アマガミの主人公、ギャグ漫画日和のクマ吉くん・・・'},
+    //TODO　一人一人モザイク入れて挿入する？
+    {type: 'dialog', text: 'それらをモデルに俺は変態紳士を演じた。'},
+    //背景白黒
+    {type: 'dialog', text: 'しかし、知らない人から見たらただの気持ち悪い人でしかなかった。'},
+    //お手上げの岩田
+    {type: 'dialog', text: '-----キャラなりきり編 END-----'},
+    {type: 'sceneTransition', key: 'chu03'}
+    ],
+chu03: [//編
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'fadeIn'},
+    //{type: 'addForeground', x: 400, y: 300, key: 'robot'},
+    {type: 'dialog', text: '-----勘違い男編-----'},
+    {type: 'dialog', text: '中学に入って女子とはあまり喋る機会は多くなかった。'},
+    {type: 'dialog', text: 'しかし最近、仲良く喋ってくれる女子ができた。'},
+    {type: 'dialog', text: 'LINEの返信も早く、お互い楽しんでいる自信があった。'},
+    {type: 'dialog', text: 'もしかして、俺のこと好きなのかもな（ﾆﾁｬｱ',actorName:'中学生岩田'},
+    {type: 'timelineTransition', timelineID: 'choice_chu03'}
+  ],
+  choice_chu03:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: '実際のところ、どう思ってるんだろう？'},
+    {type: 'choice', choices: [
+      {text: '俺のこと好きになっちゃったんだろうなあ・・・(脳死)', timelineID: 'chu03_o'},
+      {text: '友達として仲良いだけでどうも思ってないだろう。', timelineID: 'chu03_x'},
+    ]}
+  ],
+  chu03_x:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: '単純に友達として仲がいいだけ・・・'},
+    {type: 'dialog', text: 'と言う考えは全然頭になかった。'},
+    {type: 'dialog', text: '頭の中はもうピンク一色だった'},
+    //{type: 'dialog', text: ''},
+    //{type: 'dialog', text: ''},
+    {type: 'timelineTransition', timelineID: 'chu03_o'}
+  ],
+  chu03_o:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: '俺って罪な男だなあ！',actorName:'中学生岩田'},
+    {type: 'dialog', text: 'いやもう付き合ってもいいけどね？俺は。',actorName:'中学生岩田'},
+    {type: 'dialog', text: 'これはもう告白したら余裕だな！！',actorName:'中学生岩田'},
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: 'その後、本当にただの勘違いで、友達として仲良くしてくれていただけだったことがわかった・・・。'},
+    //{type: 'dialog', text: ''},
+    //頭抱えてる岩田挿入
+    //何秒か静止
+    {type: 'dialog', text: '-----勘違い男編　END-----'},
     {type: 'sceneTransition', key: 'chu02'}
     ],
 
