@@ -42,8 +42,8 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('boling','assets/stand/boling.png');
       this.load.image('kaere','assets/stand/kaere.png');
       this.load.image('mawasu','assets/stand/mawasu.png');
-      this.load.image('oko_utsugi','assets/stand/oko_ustugi.png');
-      this.load.image('omoitsuki_utsugi','assets/stand/.png');
+      this.load.image('oko_utsugi','assets/stand/oko_utsugi.png');
+      this.load.image('omoitsuki_utsugi','assets/stand/omoitsuki_utsugi.png');
       this.load.image('osuwari','assets/stand/osuwari.png');
       this.load.image('oteage','assets/stand/oteage.png');
       this.load.image('reja','assets/stand/reja.png');
