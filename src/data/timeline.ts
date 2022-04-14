@@ -90,43 +90,64 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '-----謎の正義感編 END-----'},
     {type: 'timelineTransition', timelineID: 'syo03'}
     ],
-  // syo03: [//ボウリングゲーム編
-  //   {type: 'fadeOut'},
-  //   {type: 'setBackground', x: 400, y: 300, key: 'tv'},
-  //   {type: 'fadeIn'},
-  //   {type: 'dialog', text: '-----ボウリングゲーム編-----'},
-  //   {type: 'dialog', text: ''},
-  //   {type: 'dialog', text: '',actorName:''},
-  //   {type: 'dialog', text: ''},
-  //   {type: 'dialog', text: ''},
-  //   //{type: 'dialog', text: ''},
-  //   {type: 'timelineTransition', timelineID: 'choice_syo03'}
-  // ],
-  // choice_syo03:[
-  //   {type: 'setBackground', x: 400, y: 300, key: ''},
-  //   {type: 'dialog', text: 'どうしよう？'},
-  //   {type: 'choice', choices: [
-  //     {text: '', timelineID: 'syo03_x'},
-  //     {text: '', timelineID: 'syo03_o'},
-  //   ]}
-  // ],
-  // syo03_x:[
-  //   {type: 'setBackground', x: 400, y: 300, key: ''},
-  //   {type: 'dialog', text: '',actorName:''},
-  //   {type: 'dialog', text: '',actorName:''},
-  //   {type: 'dialog', text: ''},
-  //   {type: 'timelineTransition', timelineID: 'syo03_o'}
-  // ],
-  // syo03_o:[
-  //   {type: 'setBackground', x: 400, y: 300, key: ''},
-  //   {type: 'dialog', text: ''},
-  //   {type: 'dialog', text: '',actorName:''},
-  //   {type: 'dialog', text: '',actorName:''},
-  //   {type: 'dialog', text: ''},
-  //   {type: 'dialog', text: ''},
-  //   {type: 'sceneTransition', key: 'ending'}
-  //   ],
-
+  syo03: [//ボウリングゲーム編
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '-----ボウリングゲーム編-----'},
+    {type: 'dialog', text: '家に液晶テレビが来た。'},
+    {type: 'dialog', text: 'それまでは、ブラウン管のテレビしかなかったが、大きく薄いテレビになったのだ。'},
+    {type: 'dialog', text: 'ゲームが大きい画面でできる！',actorName:'小学生岩田'},
+    {type: 'dialog', text: '僕はボウリングゲームを起動した。'},
+    {type: 'dialog', text: 'ボウリングの球の形のコントローラーを投げるフリをして操作するゲームだ。'},
+    //{type: 'dialog', text: 'の球の形のコントローラーを投げるフリをして操作する'},
+    {type: 'timelineTransition', timelineID: 'choice_syo03'}
+  ],
+  choice_syo03:[
+    {type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'dialog', text: '手首に安全用のストラップをつける？'},
+    {type: 'choice', choices: [
+      {text: 'つけよう！', timelineID: 'syo03_x'},
+      {text: 'つけない！', timelineID: 'syo03_o'},
+    ]}
+  ],
+  syo03_x:[
+    {type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'dialog', text: 'つけよう！',actorName:'小学生岩田'},
+    {type: 'dialog', text: '・・・としたがゲームを操作しているうちに忘れてしまった。'},
+    {type: 'timelineTransition', timelineID: 'syo03_ex1'}
+  ],
+  syo03_o:[
+    {type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'dialog', text: 'めんどくさいからいいや！',actorName:'小学生岩田'},
+    {type: 'dialog', text: '僕は安全用のストラップを付けなかった。'},
+    {type: 'timelineTransition', timelineID: 'syo03_ex1'}
+    ],
+  syo03_ex1:[
+    {type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'dialog', text: 'ヨシ！ボウリング投げるぞー！',actorName:'小学生岩田'},
+    {type: 'dialog', text: '振りかぶって・・・・・アッ！',actorName:'小学生岩田'},
+    {type: 'dialog', text: '完全にリアルボウリングの気分でいた僕は、ボウリング玉型コントローラーをテレビに向かってぶん投げてしまった。'},
+    //がしゃん
+    //{type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'dialog', text: '・・・・・？',actorName:'小学生岩田'},
+    {type: 'dialog', text: '目の前の光景が理解できなかった。'},
+    {type: 'dialog', text: '新しいテレビの液晶が割れてバッキバキになっているではないか！'},
+    {type: 'dialog', text: 'ガチャ'},
+    {type: 'dialog', text: '母親が帰ってきてしまった！'},
+    {type: 'dialog', text: '！？',actorName:'岩田母'},
+    {type: 'dialog', text: '・・・・・'},
+    {type: 'timelineTransition', timelineID: 'syo03_ex2'}
+    ],
+  syo03_ex2:[
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'living'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: 'その後、ガチで狂乱した母親に顔面3センチの距離で詰められていたらしいが、そのことを僕は覚えていない。'},
+    {type: 'dialog', text: '母親がキレすぎてちょっと引き気味になった父親は、僕を怒ることはなかった。'},
+    {type: 'dialog', text: '・・・が、真顔でボウリング球型コントローラーを外に持っていき、地面に叩きつけて破壊したらしい。'},
+    {type: 'sceneTransition', key: 'ending'}
+    ],
 
   chu01: [//中学生開始 勘違い男編
     {type: 'fadeOut'},
@@ -170,7 +191,7 @@ export const timelineData: Timelines = {
     //頭抱えてる岩田挿入
     //何秒か静止
     {type: 'dialog', text: '-----勘違い男編　END-----'},
-    {type: 'sceneTransition', key: 'chu02'}
+    {type: 'timelineTransition', timelineID: 'chu02'}
     ],
   chu02: [//キャラなりきり編
     {type: 'fadeOut'},
@@ -210,51 +231,74 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'しかし、知らない人から見たらただの気持ち悪い人でしかなかった。'},
     //お手上げの岩田
     {type: 'dialog', text: '-----キャラなりきり編 END-----'},
-    {type: 'sceneTransition', key: 'chu03'}
+    {type: 'timelineTransition', timelineID: 'chu03'}
     ],
-chu03: [//編
+chu03: [//英語は苦手編
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
+    {type: 'fadeIn'},
+    //{type: 'addForeground', x: 400, y: 300, key: 'robot'},
+    {type: 'dialog', text: '-----英語は苦手編-----'},
+    {type: 'dialog', text: '英語が苦手で、いつも赤点ギリギリだった俺。'},
+    {type: 'dialog', text: '高校受験を控えているのもあり、頭がいい友達に英語を教えてもらうことにした。'},
+    {type: 'setBackground', x: 400, y: 300, key: 'desk'},
+    {type: 'dialog', text: '冬休み、毎日のように俺の家に来てもらって何時間も勉強をした。'},
+    {type: 'dialog', text: 'この文法はこういう意味だから・・・',actorName:'友人K'},
+    {type: 'dialog', text: 'そうなのか！わかってきたぞ！',actorName:'中学生岩田'},
+    {type: 'dialog', text: '・・・・・'},
+    {type: 'timelineTransition', timelineID: 'chu03_a'}
+  ],
+  chu03_a:[
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '21点だった！',actorName:'中学生岩田'},
+    {type: 'dialog', text: '毎日のように勉強を教えてもらったにも関わらず、21点はセンスがないんだろうなと感じた。'},
+    {type: 'timelineTransition', timelineID: 'chu03_b'}
+  ],
+  chu03_b:[
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
     {type: 'fadeIn'},
-    //{type: 'addForeground', x: 400, y: 300, key: 'robot'},
-    {type: 'dialog', text: '-----勘違い男編-----'},
-    {type: 'dialog', text: '中学に入って女子とはあまり喋る機会は多くなかった。'},
-    {type: 'dialog', text: 'しかし最近、仲良く喋ってくれる女子ができた。'},
-    {type: 'dialog', text: 'LINEの返信も早く、お互い楽しんでいる自信があった。'},
-    {type: 'dialog', text: 'もしかして、俺のこと好きなのかもな（ﾆﾁｬｱ',actorName:'中学生岩田'},
-    {type: 'timelineTransition', timelineID: 'choice_chu03'}
-  ],
-  choice_chu03:[
-    {type: 'setBackground', x: 400, y: 300, key: 'class'},
-    {type: 'dialog', text: '実際のところ、どう思ってるんだろう？'},
-    {type: 'choice', choices: [
-      {text: '俺のこと好きになっちゃったんだろうなあ・・・(脳死)', timelineID: 'chu03_o'},
-      {text: '友達として仲良いだけでどうも思ってないだろう。', timelineID: 'chu03_x'},
-    ]}
-  ],
-  chu03_x:[
-    {type: 'setBackground', x: 400, y: 300, key: 'class'},
-    {type: 'dialog', text: '単純に友達として仲がいいだけ・・・'},
-    {type: 'dialog', text: 'と言う考えは全然頭になかった。'},
-    {type: 'dialog', text: '頭の中はもうピンク一色だった'},
+    {type: 'dialog', text: '時は流れ、公立高校のグローバルビジネス科を受験することにした。'},
+    {type: 'dialog', text: 'では、面接を始めます。'},
+    {type: 'dialog', text: '・・・・・'},
+    {type: 'dialog', text: '岩田さんは、苦手な教科はありますか？',actorName:'面接官'},
     //{type: 'dialog', text: ''},
     //{type: 'dialog', text: ''},
     {type: 'timelineTransition', timelineID: 'chu03_o'}
   ],
+  choice_chu03:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: 'なんて答えよう？英語は苦手だけど・・・'},
+    {type: 'choice', choices: [
+      {text: '適当にでっち上げようとする', timelineID: 'chu03_x'},
+      {text: '正直に英語が苦手と答える', timelineID: 'chu03_o'},
+    ]}
+  ],
+  chu03_x:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'dialog', text: 'えーと・・・',actorName:'中学生岩田'},
+    {type: 'dialog', text: '苦手なのは、英語しか思いつかない。'},
+    {type: 'dialog', text: 'だめた。もう頭が真っ白だ。'},
+    //{type: 'dialog', text: ''},
+    //{type: 'dialog', text: ''},
+    {type: 'timelineTransition', timelineID: 'choice_chu03'}
+  ],
   chu03_o:[
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
-    {type: 'dialog', text: '俺って罪な男だなあ！',actorName:'中学生岩田'},
-    {type: 'dialog', text: 'いやもう付き合ってもいいけどね？俺は。',actorName:'中学生岩田'},
-    {type: 'dialog', text: 'これはもう告白したら余裕だな！！',actorName:'中学生岩田'},
+    {type: 'dialog', text: 'もうこれは正直に言うしかない！'},
+    {type: 'dialog', text: '英語が苦手です！！',actorName:'中学生岩田'},
+    {type: 'dialog', text: 'しょうがないじゃん、苦手は苦手だもの。'},
+    {type: 'dialog', text: 'え？w グローバルビジネス科なのに？w',actorName:'面接官'},
+    {type: 'dialog', text: '半笑いで言われた。というか煽ってるだろそれ。'},
+    {type: 'dialog', text: '・・・・・'},
     {type: 'fadeOut'},
-    {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
+    {type: 'setBackground', x: 400, y: 300, key: 'desk'},
     {type: 'fadeIn'},
-    {type: 'dialog', text: 'その後、本当にただの勘違いで、友達として仲良くしてくれていただけだったことがわかった・・・。'},
-    //{type: 'dialog', text: ''},
-    //頭抱えてる岩田挿入
-    //何秒か静止
-    {type: 'dialog', text: '-----勘違い男編　END-----'},
-    {type: 'sceneTransition', key: 'chu02'}
+    {type: 'dialog', text: '面接官に煽られた男が合格するわけもなく、家から徒歩7分の私立高校に通うことになるのだった・・・。'},
+    {type: 'dialog', text: '-----英語は苦手編　END-----'},
+    {type: 'sceneTransition', key: 'ending'}
     ],
 
 
