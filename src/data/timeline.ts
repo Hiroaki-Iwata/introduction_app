@@ -23,6 +23,7 @@ export const timelineData: Timelines = {
     {type: 'fadeIn'},
     {type: 'dialog', text: '-----ヒロインの名前編-----'},
     {type: 'dialog', text: 'MOTHER2やろうっと ▼',actorName: '小学生岩田'},
+    {type: 'addForeground', x: 400, y: 300, key: 'unadare'},
     {type: 'dialog', text: '僕はMOTHER2のカセットに息を吹きかけて本体に挿し、スーパーファミコンを起動した。▼'},
     {type: 'dialog', text: 'ヒロインの名前かぁ▼',actorName: '小学生岩田'},
     {type: 'timelineTransition', timelineID: 'choice_syo01'},

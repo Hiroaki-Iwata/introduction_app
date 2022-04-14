@@ -23,20 +23,37 @@ export class LoadingScene extends Phaser.Scene {
       this.add.text(width/2, height/2 + 60, 'Loading...').setOrigin(0.5);
 
       // アセットをロード（一度ロードしたアセットは他のシーンでも使用可）
-      this.load.image('bath','assets/bath.jpg');
-      this.load.image('coffee_cup','assets/coffee_cup.jpg');
-      this.load.image('chugaku','assets/chugaku.jpg');
-      this.load.image('class','assets/class.jpg');
-      this.load.image('living','assets/living.jpg');
-      this.load.image('rusutsu','assets/rusutsu.jpg');
-      this.load.image('r_class','assets/r_class.jpg');
-      this.load.image('r_hall','assets/r_hall.jpg');
-      this.load.image('soen','assets/soen.jpg');
-      this.load.image('desk','assets/desk.jpg');
-      this.load.image('mother','assets/mother.jpg');
-      this.load.image('hanabi','assets/hanabi.jpg');
-      this.load.image('tv','assets/tv.jpg');
-      //this.load.image('','assets/.jpg');
+      //背景
+      this.load.image('bath','assets/back/bath.jpg');
+      this.load.image('coffee_cup','assets/back/coffee_cup.jpg');
+      this.load.image('chugaku','assets/back/chugaku.jpg');
+      this.load.image('class','assets/back/class.jpg');
+      this.load.image('living','assets/back/living.jpg');
+      this.load.image('rusutsu','assets/back/rusutsu.jpg');
+      this.load.image('r_class','assets/back/r_class.jpg');
+      this.load.image('r_hall','assets/back/r_hall.jpg');
+      this.load.image('soen','assets/back/soen.jpg');
+      this.load.image('desk','assets/back/desk.jpg');
+      this.load.image('mother','assets/back/mother.jpg');
+      this.load.image('hanabi','assets/back/hanabi.jpg');
+      this.load.image('tv','assets/back/tv.jpg');
+      //立ち絵
+      this.load.image('atama','assets/stand/atama.png');
+      this.load.image('boling','assets/stand/boling.png');
+      this.load.image('kaere','assets/stand/kaere.png');
+      this.load.image('mawasu','assets/stand/mawasu.png');
+      this.load.image('oko_utsugi','assets/stand/oko_ustugi.png');
+      this.load.image('omoitsuki_utsugi','assets/stand/.png');
+      this.load.image('osuwari','assets/stand/osuwari.png');
+      this.load.image('oteage','assets/stand/oteage.png');
+      this.load.image('reja','assets/stand/reja.png');
+      this.load.image('shinshi','assets/stand/shinshi.png');
+      this.load.image('think','assets/stand/think.png');
+      this.load.image('ukiuki','assets/stand/ukiuki.png');
+      this.load.image('unadare','assets/stand/unadare.png');
+      this.load.image('utsugi','assets/stand/utsugi.png');
+      this.load.image('uwa','assets/stand/uwa.png');
+      //this.load.image('','assets/back/.jpg');
       //TODO:一個のスプライト画像にして読み込みを高速化する
       //TODO:余力があればHerokuにデプロイしてCDNを利用する
 
