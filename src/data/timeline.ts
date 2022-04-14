@@ -16,6 +16,7 @@ export const timelineData: Timelines = {
       {text: '高校生の章', timelineID: 'kou01'}
     ]}
   ],
+//--------------------------------------------------------------
   syo01: [//小学生開始_ヒロインの名前編
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'mother'},
@@ -24,7 +25,6 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'MOTHER2やろうっと ▼',actorName: '小学生岩田'},
     {type: 'dialog', text: '僕はMOTHER2のカセットに息を吹きかけて本体に挿し、スーパーファミコンを起動した。▼'},
     {type: 'dialog', text: 'ヒロインの名前かぁ▼',actorName: '小学生岩田'},
-    //{type: 'dialog', text: '金髪の超能力使い',actorName: '小学生岩田'},
     {type: 'timelineTransition', timelineID: 'choice_syo01'},
   ],
   choice_syo01: [//小学生：ヒロイン名前どうする
@@ -148,7 +148,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '-----ボウリングゲーム編 END-----'},
     {type: 'sceneTransition', key: 'ending'}
     ],
-
+//-----------------------------------------------------------------
   chu01: [//中学生開始 勘違い男編
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
@@ -202,7 +202,6 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '中学では、朝に読書の時間があった。▼'},
     {type: 'dialog', text: '硬派な文学なんて俺は読めないから、ライトノベルを読もう！▼',actorName:'中学生岩田'},
     //変猫の画像を入れる
-
     {type: 'timelineTransition', timelineID: 'choice_chu02'}
   ],
   choice_chu02:[
@@ -231,7 +230,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '-----キャラなりきり編 END-----'},
     {type: 'timelineTransition', timelineID: 'chu03'}
     ],
-chu03: [//英語は苦手編
+  chu03: [//英語は苦手編
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
     {type: 'fadeIn'},
@@ -298,8 +297,7 @@ chu03: [//英語は苦手編
     {type: 'dialog', text: '-----英語は苦手編　END-----'},
     {type: 'sceneTransition', key: 'ending'}
     ],
-
-
+//--------------------------------------------------------------
   kou01: [//高校生編開始_尖ってる岩田くんの章
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_hall'},
@@ -336,7 +334,6 @@ chu03: [//英語は苦手編
     {type: 'dialog', text: '-----尖ってる岩田くん編 END-----'},
     {type: 'timelineTransition', timelineID: 'kou02'}
   ],
-
   kou02: [//無限課金の章
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
@@ -376,7 +373,6 @@ chu03: [//英語は苦手編
     {type: 'dialog', text: '---課金倍プッシュ編　END---'},
     {type: 'timelineTransition', timelineID: 'kou03'}
   ],
-
   kou03: [//花火大会チキンの章
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'hanabi'},
@@ -409,7 +405,6 @@ chu03: [//英語は苦手編
     {type: 'dialog', text: 'それから俺は、機嫌を取ることに終始していた。▼'},
     {type: 'timelineTransition', timelineID: 'kou03_ex'}
   ],
-
   kou03_ex:[
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
@@ -420,7 +415,6 @@ chu03: [//英語は苦手編
     {type: 'dialog', text: '-----花火大会チキン編　END-----'},
     {type: 'timelineTransition', timelineID: 'kou04'}
   ],
-
   kou04: [//悪夢のコーヒーカップの章
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
