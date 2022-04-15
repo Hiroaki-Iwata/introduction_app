@@ -1,7 +1,5 @@
 import { Timelines } from '../type/Timelines';
 
-
-//TODO:文字を１文字ずつ表示するようにする
 //TODO:効果音・BGMの実装
 //TODO:高校生編の描写を丁寧に
 //TODO:自己紹介編追加する？
@@ -286,11 +284,15 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'ロウきゅーぶの主人公、アマガミの主人公、ギャグ漫画日和のクマ吉くん・・・▼'},
     //TODO　一人一人モザイク入れて挿入する？
     {type: 'dialog', text: 'それらをモデルに俺は変態紳士を演じた。▼'},
-    {type: 'setBackground', x: 400, y: 300, key: 'class_black'},
+    {type: 'timelineTransition', timelineID: 'chu02_oa'}
+    ],
+  chu02_oa:[
+    {type: 'setBackground', x: 400, y: 300, key: 'class_b'},
+    {type: 'addForeground', x: 400, y: 300, key: 'shinshi'},
     {type: 'dialog', text: 'しかし、知らない人から見たらただの気持ち悪い人でしかなかった。▼'},
     {type: 'dialog', text: '-----キャラなりきり編 END-----'},
     {type: 'timelineTransition', timelineID: 'chu03'}
-    ],
+  ],
   chu03: [//英語は苦手編
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
@@ -322,7 +324,7 @@ export const timelineData: Timelines = {
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'chugaku'},
     {type: 'fadeIn'},
-    {type: 'addForeground', x: 400, y: 300, key: 'robot'},
+    {type: 'addForeground', x: 400, y: 300, key: 'oteage'},
     {type: 'dialog', text: '21点だった！▼',actorName:'中学生岩田'},
     {type: 'dialog', text: '毎日のように勉強を教えてもらったにも関わらず、21点はセンスがないんだろうなと感じた。▼'},
     {type: 'timelineTransition', timelineID: 'chu03_d'}
@@ -574,16 +576,26 @@ export const timelineData: Timelines = {
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
     {type: 'fadeIn'},
+    {type: 'addForeground', x: 400, y: 300, key: 'hair'},
     {type: 'dialog', text: 'どうやら、俺が回しすぎたせいで気分が悪くなったようだ。▼'},
     {type: 'dialog', text: '他の人はジェットコースターに乗りに行ったが、その子は休むと言う。▼'},
-    {type: 'dialog', text: '大丈夫？▼',actorName:'高校生岩田'},
-    {type: 'dialog', text: '俺が聞いた、その時だった。▼'},
-    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu_black'},
-    {type: 'dialog', text: '   お  前  の  せ  い  だ  ',actorName:'女子M'},
-    {type: 'dialog', text: '真顔で、しかも聞いたこともない声色だった。▼'},
     {type: 'timelineTransition', timelineID: 'kou04_ob'}
   ],
   kou04_ob:[
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
+    {type: 'addForeground', x: 400, y: 300, key: 'think'},
+    {type: 'dialog', text: '大丈夫？▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: '俺が聞いた、その時だった。▼'},
+    {type: 'timelineTransition', timelineID: 'kou04_oc'}
+  ],
+  kou04_oc:[
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu_black'},
+    {type: 'addForeground', x: 400, y: 300, key: 'hair'},
+    {type: 'dialog', text: '   お  前  の  せ  い  だ  ',actorName:'女子M'},
+    {type: 'dialog', text: '真顔で、しかも聞いたこともない声色だった。▼'},
+    {type: 'timelineTransition', timelineID: 'kou04_od'}
+  ],
+  kou04_od:[
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
     {type: 'addForeground', x: 400, y: 300, key: 'unadare'},
     {type: 'dialog', text: 'この日はそれ以降、世界の終わりが来たような顔をしていたそうだ。▼'},

@@ -28,7 +28,7 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('coffee_cup','assets/back/coffee_cup.jpg');
       this.load.image('chugaku','assets/back/chugaku.jpg');
       this.load.image('class','assets/back/class.jpg');
-      this.load.image('class_black','assets/back/class_black.jpg');
+      this.load.image('class_b','assets/back/class_b.jpg');
       this.load.image('living','assets/back/living.jpg');
       this.load.image('rusutsu','assets/back/rusutsu.jpg');
       this.load.image('rusutsu_red','assets/back/rusutsu_red.jpg');
@@ -58,11 +58,11 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('unadare','assets/stand/unadare.png');
       this.load.image('utsugi','assets/stand/utsugi.png');
       this.load.image('uwa','assets/stand/uwa.png');
-      this.load.image('heneko','assets/back/heneko.jpg');
-      this.load.image('deresute','assets/back/deresute.png');
-      this.load.image('osage','assets/back/oasge.png');
-      this.load.image('hair','assets/back/hair.png');
-      this.load.image('long_hair','assets/back/long_hair.png');
+      this.load.image('heneko','assets/stand/heneko.jpg');
+      this.load.image('deresute','assets/stand/deresute.png');
+      this.load.image('osage','assets/stand/osage.png');
+      this.load.image('hair','assets/stand/hair.png');
+      this.load.image('long_hair','assets/stand/long_hair.png');
       //this.load.image('','assets/back/.jpg');
       //TODO:一個のスプライト画像にして読み込みを高速化する
       //TODO:余力があればHerokuにデプロイしてCDNを利用する
