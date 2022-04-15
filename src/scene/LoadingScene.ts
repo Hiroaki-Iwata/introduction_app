@@ -37,6 +37,7 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('mother','assets/back/mother.jpg');
       this.load.image('hanabi','assets/back/hanabi.jpg');
       this.load.image('tv','assets/back/tv.jpg');
+      this.load.image('tv_ware','assets/back/tv_ware.jpg');
       //立ち絵
       this.load.image('atama','assets/stand/atama.png');
       this.load.image('boling','assets/stand/boling.png');
@@ -53,6 +54,11 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('unadare','assets/stand/unadare.png');
       this.load.image('utsugi','assets/stand/utsugi.png');
       this.load.image('uwa','assets/stand/uwa.png');
+      this.load.image('heneko','assets/back/heneko.jpg');
+      this.load.image('deresute','assets/back/deresute.png');
+      this.load.image('osage','assets/back/oasge.png');
+      this.load.image('hair','assets/back/hair.png');
+      this.load.image('long_hair','assets/back/long_hair.png');
       //this.load.image('','assets/back/.jpg');
       //TODO:一個のスプライト画像にして読み込みを高速化する
       //TODO:余力があればHerokuにデプロイしてCDNを利用する

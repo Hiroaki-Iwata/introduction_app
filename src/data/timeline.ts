@@ -3,7 +3,9 @@ import { Timelines } from '../type/Timelines';
 
 //TODO:文字を１文字ずつ表示するようにする
 //TODO:効果音・BGMの実装
-//TODO:tv画像の修正・tv割れてる画像の用意
+//TODO:tv画像の修正（引きにする）・tv割れてる画像・デレステ画像・変猫画像の用意
+//TODO:高校生編の描写を丁寧に
+//TODO:自己紹介編追加する？
 
 export const timelineData: Timelines = {
   start: [
@@ -64,7 +66,6 @@ export const timelineData: Timelines = {
     {type: 'addForeground', x: 400, y: 300, key: 'ukiuki'},
     {type: 'dialog', text: '同時に3人からのラブレターを受け取った俺は歓喜していた。▼'},
     {type: 'dialog', text: 'モテているという事実にもそうだが、なんとその中に自分の好きな人がいたのだ！▼'},
-    //{type: 'dialog', text: ''},
     {type: 'timelineTransition', timelineID: 'choice_syo02'}
   ],
   choice_syo02:[
@@ -179,7 +180,6 @@ export const timelineData: Timelines = {
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
     {type: 'fadeIn'},
-    //{type: 'addForeground', x: 400, y: 300, key: 'robot'},
     {type: 'dialog', text: '-----勘違い男編-----'},
     {type: 'dialog', text: '中学に入って女子とはあまり喋る機会は多くなかった。▼'},
     {type: 'dialog', text: 'しかし最近、仲良く喋ってくれる女子ができた。▼'},
@@ -210,7 +210,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '俺って罪な男だなあ！▼',actorName:'中学生岩田'},
     {type: 'dialog', text: 'いやもう付き合ってもいいけどね？俺は。▼',actorName:'中学生岩田'},
     {type: 'dialog', text: 'これはもう告白したら余裕だな！！▼',actorName:'中学生岩田'},
-    {type: 'timelineTransition', timelineID: 'chu02_oa'}
+    {type: 'timelineTransition', timelineID: 'chu01_oa'}
   ],
   chu01_oa:[
     {type: 'fadeOut'},
