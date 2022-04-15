@@ -53,6 +53,15 @@ export class DialogBox extends Phaser.GameObjects.Container {
 
   // 会話テキストのセット
   public setText(text: string) {
+    // let eventCounter = 0;
+    // let dialog = text.split('');
+    // animateText: function () {
+    //   eventCounter++;
+    //   this.text.setText(this.text.text + dialog[eventCounter - 1]);
+    //   if (eventCounter === dialog.length) {
+    //     this.timedEvent.remove();
+    //   }
+    // }
     this.text.setText(text);
   }
 

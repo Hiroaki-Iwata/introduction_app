@@ -3,9 +3,9 @@ import { Timelines } from '../type/Timelines';
 
 //TODO:文字を１文字ずつ表示するようにする
 //TODO:効果音・BGMの実装
-//TODO:tv画像の修正（引きにする）・tv割れてる画像・デレステ画像・変猫画像の用意
 //TODO:高校生編の描写を丁寧に
 //TODO:自己紹介編追加する？
+//TODO クレジット
 
 export const timelineData: Timelines = {
   start: [
@@ -14,10 +14,20 @@ export const timelineData: Timelines = {
   ],
   choice_scenario: [//シナリオ選択
     {type: 'choice', choices: [
+      {text: '自己紹介', timelineID: 'intro'},
       {text: '小学生の章', timelineID: 'syo01'},
       {text: '中学生の章', timelineID: 'chu01'},
       {text: '高校生の章', timelineID: 'kou01'}
     ]}
+  ],
+  intro:[
+    {type:'dialog', text:'私は岩田大明（ひろあき）といいます。'},
+    {type:'dialog', text:'北海道札幌出身で、大学時代から一人暮らししていました。'},
+    {type:'dialog', text:'趣味はゲームで、ゼル伝、スプラトゥーン、APEXなどやってました。'},
+    {type:'dialog', text:'基本的にはRPGが好きです。ロマサガ、MOTHER2、FFシリーズ、DQシリーズ、クロノトリガー、ペルソナシリーズ、スーパーマリオRPG、ポケモン、キングダムハーツ、ダークソウル、ニーアなど・・・'},
+    {type:'dialog', text:'古いゲームも新しいゲームも好きです。実家にあったスーファミを今住んでるところに持ってくるくらいにはスーファミ好きです。'},
+    {type:'dialog', text:'これからご指導ご鞭撻のほど、よろしくお願いいたします。'},
+    {type: 'timelineTransition', timelineID: 'choice_scenario'},
   ],
 //--------------------------------------------------------------
   syo01: [//小学生開始_ヒロインの名前編
