@@ -28,10 +28,14 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('coffee_cup','assets/back/coffee_cup.jpg');
       this.load.image('chugaku','assets/back/chugaku.jpg');
       this.load.image('class','assets/back/class.jpg');
+      this.load.image('class_black','assets/back/class_black.jpg');
       this.load.image('living','assets/back/living.jpg');
       this.load.image('rusutsu','assets/back/rusutsu.jpg');
+      this.load.image('rusutsu_red','assets/back/rusutsu_red.jpg');
       this.load.image('r_class','assets/back/r_class.jpg');
+      this.load.image('r_class_black','assets/back/r_class_black.jpg');
       this.load.image('r_hall','assets/back/r_hall.jpg');
+      this.load.image('r_hall_black','assets/back/r_hall_black.jpg');
       this.load.image('soen','assets/back/soen.jpg');
       this.load.image('desk','assets/back/desk.jpg');
       this.load.image('mother','assets/back/mother.jpg');

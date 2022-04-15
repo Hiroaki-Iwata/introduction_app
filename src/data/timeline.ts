@@ -62,7 +62,12 @@ export const timelineData: Timelines = {
     {type: 'fadeIn'},
     {type: 'dialog', text: '-----謎の正義感編-----'},
     {type: 'dialog', text: '小学6年生の秋、岩田には人生最初で最後のモテ期が訪れていた。▼'},
+    {type: 'addForeground', x: 400, y: 300, key: 'osage'},
     {type: 'dialog', text: '手紙渡せって言われたから、はい。▼',actorName:'女子A'},
+    {type: 'timelineTransition', timelineID: 'syo02a'}
+  ],
+  syo02a: [
+    {type: 'setBackground', x: 400, y: 300, key: 'soen'},
     {type: 'addForeground', x: 400, y: 300, key: 'ukiuki'},
     {type: 'dialog', text: '同時に3人からのラブレターを受け取った俺は歓喜していた。▼'},
     {type: 'dialog', text: 'モテているという事実にもそうだが、なんとその中に自分の好きな人がいたのだ！▼'},
@@ -154,7 +159,7 @@ export const timelineData: Timelines = {
   ],
   syo03_ob:[
     //がちゃんの音
-    {type: 'setBackground', x: 400, y: 300, key: 'tv'},
+    {type: 'setBackground', x: 400, y: 300, key: 'tv_ware'},
     {type: 'addForeground', x: 400, y: 300, key: 'oteage'},
     {type: 'dialog', text: '目の前の光景が理解できなかった。▼'},
     {type: 'dialog', text: '新しいテレビの液晶が割れてバッキバキになっているではないか！▼'},
@@ -182,8 +187,14 @@ export const timelineData: Timelines = {
     {type: 'fadeIn'},
     {type: 'dialog', text: '-----勘違い男編-----'},
     {type: 'dialog', text: '中学に入って女子とはあまり喋る機会は多くなかった。▼'},
+    {type: 'addForeground', x: 400, y: 300, key: 'long_hair'},
     {type: 'dialog', text: 'しかし最近、仲良く喋ってくれる女子ができた。▼'},
     {type: 'dialog', text: 'LINEの返信も早く、お互い楽しんでいる自信があった。▼'},
+    {type: 'timelineTransition', timelineID: 'choice_chu01'}
+  ],
+  chu01a: [
+    {type: 'setBackground', x: 400, y: 300, key: 'class'},
+    {type: 'addForeground', x: 400, y: 300, key: 'think'},
     {type: 'dialog', text: 'もしかして、俺のこと好きなのかもな（ﾆﾁｬｱ ▼',actorName:'中学生岩田'},
     {type: 'timelineTransition', timelineID: 'choice_chu01'}
   ],
@@ -240,12 +251,11 @@ export const timelineData: Timelines = {
     {type: 'addForeground', x: 400, y: 300, key: 'osuwari'},
     {type: 'dialog', text: '中学では、朝に読書の時間があった。▼'},
     {type: 'dialog', text: '硬派な文学なんて俺は読めないから、ライトノベルを読もう！▼',actorName:'中学生岩田'},
-    //変猫の画像を入れる
     {type: 'timelineTransition', timelineID: 'choice_chu02'}
   ],
   choice_chu02:[
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
-    {type: 'addForeground', x: 400, y: 300, key: 'think'},
+    {type: 'addForeground', x: 400, y: 300, key: 'heneko'},
     {type: 'dialog', text: '変態紳士・・・？▼',actorName:'中学生岩田'},
     {type: 'choice', choices: [
       {text: 'このキャラウケる、俺も変態紳士キャラで行こう！', timelineID: 'chu02_o'},
@@ -266,9 +276,8 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: 'ロウきゅーぶの主人公、アマガミの主人公、ギャグ漫画日和のクマ吉くん・・・▼'},
     //TODO　一人一人モザイク入れて挿入する？
     {type: 'dialog', text: 'それらをモデルに俺は変態紳士を演じた。▼'},
-    //背景白黒
+    {type: 'setBackground', x: 400, y: 300, key: 'class_black'},
     {type: 'dialog', text: 'しかし、知らない人から見たらただの気持ち悪い人でしかなかった。▼'},
-    //お手上げの岩田
     {type: 'dialog', text: '-----キャラなりきり編 END-----'},
     {type: 'timelineTransition', timelineID: 'chu03'}
     ],
@@ -413,8 +422,7 @@ export const timelineData: Timelines = {
     {type: 'fadeIn'},
     {type: 'dialog', text: '-----課金倍プッシュ編-----'},
     {type: 'dialog', text: '高校2年の授業中、俺は隠れてスマホのゲームをしていた。▼'},
-    //{type: 'setBackground', x: 400, y: 300, key: 'r_class'},
-    //TODO デレステの画像に変更
+    {type: 'addForeground', x: 400, y: 300, key: 'deresute'},
     {type: 'dialog', text: 'うわ、ウエディング衣装じゃん。これは引きたい！▼',actorName:'高校生岩田'},
     {type: 'timelineTransition', timelineID: 'choice_kou02'}
   ],
@@ -560,7 +568,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '他の人はジェットコースターに乗りに行ったが、その子は休むと言う。▼'},
     {type: 'dialog', text: '大丈夫？▼',actorName:'高校生岩田'},
     {type: 'dialog', text: '俺が聞いた、その時だった。▼'},
-    //TODO 白黒ルスツ画像にする？
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu_black'},
     {type: 'dialog', text: '   お  前  の  せ  い  だ  ',actorName:'女子M'},
     {type: 'dialog', text: '真顔で、しかも聞いたこともない声色だった。▼'},
     {type: 'timelineTransition', timelineID: 'kou04_ob'}
