@@ -42,6 +42,7 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('hanabi','assets/back/hanabi.jpg');
       this.load.image('tv','assets/back/tv.jpg');
       this.load.image('tv_ware','assets/back/tv_ware.jpg');
+      this.load.image('glass','assets/back/glass.jpg');
       //立ち絵
       this.load.image('atama','assets/stand/atama.png');
       this.load.image('boling','assets/stand/boling.png');
@@ -63,10 +64,8 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('osage','assets/stand/osage.png');
       this.load.image('hair','assets/stand/hair.png');
       this.load.image('long_hair','assets/stand/long_hair.png');
-      //this.load.image('','assets/back/.jpg');
-      //TODO:一個のスプライト画像にして読み込みを高速化する
-      //TODO:余力があればHerokuにデプロイしてCDNを利用する
-
+      this.load.image('hentai','assets/stand/hentai.png');
+      //this.load.image('','assets/stand/.png');
 
       // アセットのロードが完了したらTitleSceneに遷移
       this.load.on('complete', () => {

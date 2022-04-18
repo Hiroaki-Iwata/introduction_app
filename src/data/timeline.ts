@@ -1,13 +1,11 @@
 import { Timelines } from '../type/Timelines';
 
 //TODO:効果音・BGMの実装
-//TODO:高校生編の描写を丁寧に
-//TODO クレジット
 
 export const timelineData: Timelines = {
   start: [
-      {type: 'dialog',text:'どのシナリオをプレイしますか？▼'},
-      {type: 'timelineTransition', timelineID: 'choice_scenario'},//どこのタイムラインに飛ばすか
+    {type: 'dialog',text:'どのシナリオをプレイしますか？▼'},
+    {type: 'timelineTransition', timelineID: 'choice_scenario'},//どこのタイムラインに飛ばすか
   ],
   choice_scenario: [//シナリオ選択
     {type: 'choice', choices: [
@@ -24,7 +22,8 @@ export const timelineData: Timelines = {
     {type:'dialog', text:'基本的にはRPGが好きです。ロマサガ、MOTHER2、FFシリーズ、DQシリーズ、クロノトリガー、ペルソナシリーズ、スーパーマリオRPG、ポケモン、キングダムハーツ、ダークソウル、ニーアなど・・・'},
     {type:'dialog', text:'古いゲームも新しいゲームも好きです。実家にあったスーファミを今住んでるところに持ってくるくらいにはスーファミ好きです。'},
     {type:'dialog', text:'これからご指導ご鞭撻のほど、よろしくお願いいたします。'},
-    {type: 'timelineTransition', timelineID: 'choice_scenario'},
+    //{type: 'timelineTransition', timelineID: 'choice_scenario'},
+    {type: 'sceneTransition', key: 'ending'}
   ],
 //--------------------------------------------------------------
   syo01: [//小学生開始_ヒロインの名前編
@@ -183,6 +182,10 @@ export const timelineData: Timelines = {
     {type: 'fadeIn'},
     {type: 'dialog', text: 'その後、ガチで狂乱した母親に顔面3センチの距離で詰められていたらしいが、そのことを僕は覚えていない。▼'},
     {type: 'dialog', text: '母親がキレすぎてちょっと引き気味になった父親は、僕を怒ることはなかった。▼'},
+    {type: 'timelineTransition', timelineID: 'syo03_od'}
+    ],
+  syo03_od:[
+    {type: 'setBackground', x: 400, y: 300, key: 'glass'},
     {type: 'dialog', text: '・・・が、真顔でボウリング球型コントローラーを外に持っていき、地面に叩きつけて破壊したらしい。▼'},
     {type: 'dialog', text: '-----ボウリングゲーム編 END-----'},
     {type: 'sceneTransition', key: 'ending'}
@@ -279,9 +282,8 @@ export const timelineData: Timelines = {
   ],
   chu02_o:[
     {type: 'setBackground', x: 400, y: 300, key: 'class'},
-    {type: 'addForeground', x: 400, y: 300, key: 'shinshi'},
+    {type: 'addForeground', x: 400, y: 300, key: 'hentai'},
     {type: 'dialog', text: 'ロウきゅーぶの主人公、アマガミの主人公、ギャグ漫画日和のクマ吉くん・・・▼'},
-    //TODO　一人一人モザイク入れて挿入する？
     {type: 'dialog', text: 'それらをモデルに俺は変態紳士を演じた。▼'},
     {type: 'timelineTransition', timelineID: 'chu02_oa'}
     ],
@@ -391,7 +393,7 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '高校一年生の入学したての頃だった。 ▼'},
     {type: 'dialog', text: '俺は移動教室の時、男子の集団から離れて移動していた。 ▼'},
     {type: 'addForeground', x: 400, y: 300, key: 'utsugi'},
-    {type: 'dialog', text: 'なんでお前だけ離れてんの？',actorName:'クラスの男子'},
+    {type: 'dialog', text: 'なんでお前だけ離れてんの？▼',actorName:'クラスの男子'},
     {type: 'dialog', text: 'クラスの奴から声をかけられた。▼'},
     {type: 'timelineTransition', timelineID: 'choice_kou01'}
   ],
@@ -414,16 +416,29 @@ export const timelineData: Timelines = {
   kou01_o:[
     {type: 'setBackground', x: 400, y: 300, key: 'r_hall'},
     {type: 'addForeground', x: 400, y: 300, key: 'kaere'},
-    {type: 'dialog', text: 'いや、お前らと友達だと思われたくないんだよね▼'},
-    {type: 'dialog', text: 'ドヤ顔で言った。▼'},
+    {type: 'dialog', text: '当時尖っていた俺はドヤ顔で言い放った。▼'},
+    {type: 'dialog', text: 'いや、お前らと友達だと思われたくないんだよね▼',actorName:'クソガキ岩田'},
+    //{type: 'dialog', text: '▼'},
     {type: 'timelineTransition', timelineID: 'kou01_oa'}
   ],
   kou01_oa:[
     {type: 'setBackground', x: 400, y: 300, key: 'r_hall'},
     {type: 'addForeground', x: 400, y: 300, key: 'utsugi'},
     {type: 'dialog', text: 'え？▼',actorName:'クラスの男子'},
-    //TODO 白黒
+  ],
+  kou01_ob:[
+    {type: 'setBackground', x: 400, y: 300, key: 'r_hall_black'},
+    {type: 'addForeground', x: 400, y: 300, key: 'utsugi'},
     {type: 'dialog', text: '空気が凍りついた・・・▼'},
+    {type: 'dialog', text: '尖りすぎて全員引いていたことだろう・・・▼'},
+    {type: 'timelineTransition', timelineID: 'kou01_oc'}
+  ],
+  kou01_oc:[
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'r_hall'},
+    {type: 'fadeIn'},
+    {type: 'addForeground', x: 400, y: 300, key: 'atama'},
+    {type: 'dialog', text: 'クラスメイトとは社会人になっても仲が良いが、尖っていた過去をずっと後悔することになるのだった・・・。▼'},
     {type: 'dialog', text: '-----尖ってる岩田くん編 END-----'},
     {type: 'timelineTransition', timelineID: 'kou02'}
   ],
@@ -432,9 +447,10 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'fadeIn'},
     {type: 'dialog', text: '-----課金倍プッシュ編-----'},
-    {type: 'dialog', text: '高校2年の授業中、俺は隠れてスマホのゲームをしていた。▼'},
+    {type: 'dialog', text: '高校2年の授業中、隠れてスマホのゲームをしていた時だった。▼'},
     {type: 'addForeground', x: 400, y: 300, key: 'deresute'},
-    {type: 'dialog', text: 'うわ、ウエディング衣装じゃん。これは引きたい！▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: 'なんと、推しのキャラの新しい衣装がガチャに登場していた！▼'},
+    {type: 'dialog', text: 'うわ、前川○くのウエディング衣装じゃん！これは引きたい！▼',actorName:'高校生岩田'},
     {type: 'timelineTransition', timelineID: 'choice_kou02'}
   ],
   choice_kou02:[
@@ -448,13 +464,18 @@ export const timelineData: Timelines = {
   kou02_x:[
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'addForeground', x: 400, y: 300, key: 'oteage'},
+    {type: 'dialog', text: '俺は、持っていたガチャアイテムをとりあえず全てガチャに注ぎ込んだ。▼'},
+    {type: 'dialog', text: 'しかし、お目当てのキャラが出ることはなかった。▼'},
     {type: 'dialog', text: '無償のガチャアイテム全部使っちゃった・・・▼',actorName:'高校生岩田'},
     {type: 'dialog', text: 'しかもなにも出ないし・・・▼',actorName:'高校生岩田'},
     {type: 'dialog', text: 'もうこれは課金するしか！？▼',actorName:'高校生岩田'},
-    {type: 'timelineTransition', timelineID: 'choice_kou02'}
+    {type: 'dialog', text: '諦めるつもりが、ガチャを回すことで頭がいっぱいになってしまった。▼'},
+    {type: 'timelineTransition', timelineID: 'kou02_o'}
   ],
   kou02_o:[
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'fadeIn'},
     {type: 'addForeground', x: 400, y: 300, key: 'atama'},
     {type: 'dialog', text: '・・・・・▼'},
     {type: 'dialog', text: 'もうこれで限界!3万!!!▼',actorName:'高校生岩田'},
@@ -464,6 +485,7 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'addForeground', x: 400, y: 300, key: 'uwa'},
     {type: 'dialog', text: '出なかった・・・・▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: '結局推しが出なかったこと、そしてなけなしのバイト代３万が一瞬にして消えたことに俺は現実逃避をするしかなかった。▼'},
     {type: 'timelineTransition', timelineID: 'kou02_ob'}
   ],
   kou02_ob:[
@@ -471,14 +493,16 @@ export const timelineData: Timelines = {
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'fadeIn'},
     {type: 'dialog', text: '-----授業後-----'},
+    {type: 'dialog', text: 'うなだれてる俺に、友人が声をかけてきた。▼'},
     {type: 'addForeground', x: 400, y: 300, key: 'utsugi'},
-    {type: 'dialog', text: 'どした？そんなうなだれて。そんな凹む授業じゃないだろ。▼',actorName:'クラスメイト'},
+    {type: 'dialog', text: 'どした？そんなうなだれて。そんな凹む授業じゃないだろ。▼',actorName:'友人U'},
     {type: 'timelineTransition', timelineID: 'kou02_oc'}
   ],
   kou02_oc:[
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'addForeground', x: 400, y: 300, key: 'unadare'},
     {type: 'dialog', text: '授業中課金して爆死したんだわ・・・▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: '授業中３万溶かした男として、しばらく男子の中で話題になった・・・。▼'},
     {type: 'dialog', text: '-----課金倍プッシュ編　END-----'},
     {type: 'timelineTransition', timelineID: 'kou03'}
   ],
@@ -497,7 +521,7 @@ export const timelineData: Timelines = {
   kou03a: [
     {type: 'setBackground', x: 400, y: 300, key: 'hanabi'},
     {type: 'addForeground', x: 400, y: 300, key: 'omoitsuki_utsugi'},
-    {type: 'dialog', text: 'レジャーシートで女の子を雨から守るぞ・・・！▼',actorName:'友人T'},
+    {type: 'dialog', text: 'レジャーシートで女の子を雨から守るぞ・・・！▼',actorName:'友人U'},
     {type: 'timelineTransition', timelineID: 'choice_kou03'}
   ],
   choice_kou03:[
@@ -527,10 +551,10 @@ export const timelineData: Timelines = {
     {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
     {type: 'fadeIn'},
-    {type: 'dialog', text: '---後日---'},
     {type: 'addForeground', x: 400, y: 300, key: 'oko_utsugi'},
-    {type: 'dialog', text: 'なんで2人きりにしたのにデートも誘わないんだ!▼',actorName:'友人T'},
-    {type: 'dialog', text: 'しこたま怒られた。▼'},
+    {type: 'dialog', text: '後日、怒った顔をした友人が俺の前に立ちはだかった。▼'},
+    {type: 'dialog', text: 'なんで2人きりにしたのにデートも誘わないんだ!▼',actorName:'友人U'},
+    {type: 'dialog', text: 'せっかく機会を作ったのに無駄にするなとしこたま怒られた。▼'},
     {type: 'dialog', text: '-----花火大会チキン編　END-----'},
     {type: 'timelineTransition', timelineID: 'kou04'}
   ],
@@ -559,6 +583,7 @@ export const timelineData: Timelines = {
     {type: 'addForeground', x: 400, y: 300, key: 'think'},
     {type: 'dialog', text: '手を抜こうかな？▼'},
     {type: 'dialog', text: 'うーん、でもそれじゃあつまらないよな▼！'},
+    {type: 'dialog', text: '俺は考え直すことにした。▼'},
     {type: 'timelineTransition', timelineID: 'choice_kou04'}
   ],
   kou04_o:[
@@ -568,6 +593,7 @@ export const timelineData: Timelines = {
     {type: 'addForeground', x: 400, y: 300, key: 'mawasu'},
     {type: 'dialog', text: '回せ回せ！！！！！！▼',actorName:'高校生岩田'},
     {type: 'dialog', text: '調子に乗った俺は、何も考えずにコーヒーカップをぶん回し続けた。▼'},
+    {type: 'dialog', text: '途中から好きな子は端っこでうずくまっていた。▼'},
     {type: 'dialog', text: '・・・・・▼'},
     {type: 'timelineTransition', timelineID: 'kou04_oa'}
   ],
@@ -583,27 +609,27 @@ export const timelineData: Timelines = {
   kou04_ob:[
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
     {type: 'addForeground', x: 400, y: 300, key: 'think'},
+    {type: 'dialog', text: '俺は、今更申し訳なくなり、声をかけた。▼'},
     {type: 'dialog', text: '大丈夫？▼',actorName:'高校生岩田'},
     {type: 'dialog', text: '俺が聞いた、その時だった。▼'},
     {type: 'timelineTransition', timelineID: 'kou04_oc'}
   ],
   kou04_oc:[
-    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu_black'},
+    {type: 'setBackground', x: 400, y: 300, key: 'rusutsu_red'},
     {type: 'addForeground', x: 400, y: 300, key: 'hair'},
     {type: 'dialog', text: '   お  前  の  せ  い  だ  ',actorName:'女子M'},
     {type: 'dialog', text: '真顔で、しかも聞いたこともない声色だった。▼'},
     {type: 'timelineTransition', timelineID: 'kou04_od'}
   ],
   kou04_od:[
+    {type: 'fadeOut'},
     {type: 'setBackground', x: 400, y: 300, key: 'rusutsu'},
     {type: 'addForeground', x: 400, y: 300, key: 'unadare'},
+    {type: 'fadeIn'},
     {type: 'dialog', text: 'この日はそれ以降、世界の終わりが来たような顔をしていたそうだ。▼'},
     {type: 'dialog', text: '-----コーヒーカップ無限回転編　END-----'},
     {type: 'sceneTransition', key: 'ending'}
   ],
-
-
-
 
 }
 
@@ -614,52 +640,3 @@ choice か timelineTransition か sceneTransition で
 終わるようにすればあとは自由
 画像はassets に入れて loadingScene.ts に書けばおk
 */
-
-//{type: 'addForeground', x: 400, y: 300, key: 'robot'},
-/*         {type: 'setBackground', x: 400, y: 300, key: 'street'},
-        {type: 'addForeground', x: 400, y: 300, key: 'robot'},
-        {type: 'dialog', text: '一刻も早くここから逃げた方がいい ▼'},
-
-                {type: 'setBackground', x: 400, y: 300, key: 'street'},
-        {type: 'addForeground', x: 400, y: 300, key: 'robot'},
-            {type: 'dialog', text: 'よろしい。ではこちらへ来てください ▼',actorName: 'ACT-42'},
-    {type: 'sceneTransition', key: 'ending'}
-    {type: 'dialog', text: 'こうして銀河を股にかけた物語が始まるのであった・・・ ▼'},
-
-
-
-  syo02: [
-    {type: 'setBackground', x: 400, y: 300, key: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: '',actorName:''},
-    {type: 'dialog', text: ''},
-    //{type: 'dialog', text: ''},
-    {type: 'timelineTransition', timelineID: 'choice_syo02'}
-  ],
-  choice_syo02:[
-    {type: 'setBackground', x: 400, y: 300, key: ''},
-    {type: 'dialog', text: ''},
-    {type: 'choice', choices: [
-      {text: '', timelineID: 'syo02_x'},
-      {text: '', timelineID: 'syo02_o'},
-    ]}
-  ],
-  syo02_x:[
-    {type: 'setBackground', x: 400, y: 300, key: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'timelineTransition', timelineID: 'choice_syo02'}
-  ],
-  syo02_o:[
-    {type: 'setBackground', x: 400, y: 300, key: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'dialog', text: ''},
-    {type: 'timelineTransition', timelineID: 'kou03'}
-    ],
-    */
