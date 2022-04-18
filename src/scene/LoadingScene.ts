@@ -67,6 +67,22 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('hentai','assets/stand/hentai.png');
       //this.load.image('','assets/stand/.png');
 
+      //効果音
+      this.load.audio('basa','assets/audio/basa.mp3');
+      this.load.audio('bishi','assets/audio/bishi.mp3');
+      this.load.audio('gacha','assets/audio/gacha.mp3');
+      this.load.audio('hirameki','assets/audio/hirameki.mp3');
+      this.load.audio('ka-n_kaka','assets/audio/ka-n_kaka.mp3');
+      this.load.audio('kirakira','assets/audio/kirakira.mp3');
+      this.load.audio('kiran','assets/audio/kiran.mp3');
+      this.load.audio('levelup','assets/audio/levelup.mp3');
+      this.load.audio('samu','assets/audio/samu.mp3');
+      this.load.audio('scared','assets/audio/scared.mp3');
+      this.load.audio('shock','assets/audio/shock.mp3');
+      this.load.audio('tin','assets/audio/tin.mp3');
+      this.load.audio('ware','assets/audio/ware.mp3');
+      //this.load.audio('','assets/audio/.mp3');
+
       // アセットのロードが完了したらTitleSceneに遷移
       this.load.on('complete', () => {
         this.scene.start('title');

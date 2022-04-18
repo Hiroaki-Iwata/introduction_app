@@ -1,6 +1,7 @@
 import { Timelines } from '../type/Timelines';
 
 //TODO:効果音・BGMの実装
+//TODO:自己紹介の演出
 
 export const timelineData: Timelines = {
   start: [
@@ -527,6 +528,7 @@ export const timelineData: Timelines = {
   choice_kou03:[
     {type: 'setBackground', x: 400, y: 300, key: 'hanabi'},
     {type: 'addForeground', x: 400, y: 300, key: 'reja'},
+    //ばさ
     {type: 'dialog', text: '友人の機転で女の子と2人きりのような状態に持っていくことができた！▼'},
     {type: 'dialog', text: '雨で会話も他の人に聞かれないだろうし、なんの話をしよう？▼'},
     {type: 'choice', choices: [
