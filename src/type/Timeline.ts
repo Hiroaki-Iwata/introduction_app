@@ -1,3 +1,4 @@
+import { UrlWithStringQuery } from 'url';
 import { Choice } from './Choice';
 
 // ダイアログ表示イベント
@@ -55,5 +56,10 @@ type FadeInEvent = {
   type: 'fadeIn',
 };
 
+type SoundPlayEvent = {
+  type: 'soundPlay',
+  key: string,
+};
+
 // Timelineはイベントの配列
-export type Timeline = (DialogEvent|SetBackgroundEvent|AddForegroundEvent|ClearForegroundEvent|TimelineTransitionEvent|SceneTransitionEvent|ChoiceEvent|FadeOutEvent|FadeInEvent)[];
+export type Timeline = (DialogEvent|SetBackgroundEvent|AddForegroundEvent|ClearForegroundEvent|TimelineTransitionEvent|SceneTransitionEvent|ChoiceEvent|FadeOutEvent|FadeInEvent|SoundPlayEvent)[];

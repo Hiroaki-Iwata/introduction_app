@@ -1,6 +1,7 @@
 import { Timeline } from '../type/Timeline';
 import { Choice } from '../type/Choice';
 import { DialogBox } from './DialogBox';
+import { Textures } from 'phaser';
 
 export class TimelinePlayer {
   private backgroundLayer: Phaser.GameObjects.Container;
@@ -55,6 +56,12 @@ export class TimelinePlayer {
     const foregroundImage = new Phaser.GameObjects.Image(this.scene, x, y, texture);
     // 前景レイヤーに画像オブジェクトを配置
     this.foregroundLayer.add(foregroundImage);
+  }
+
+  private soundPlay(texture:string) {
+    const playsound = this.scene.sound.add(texture);
+    playsound.play();
+    this.next();
   }
 
   // 前景をクリア
@@ -176,6 +183,10 @@ export class TimelinePlayer {
 
       case 'choice':  // 選択肢イベント
         this.setChoiceButtons(timelineEvent.choices);
+        break;
+
+      case 'soundPlay':
+        this.soundPlay(timelineEvent.key);
         break;
 
       default:

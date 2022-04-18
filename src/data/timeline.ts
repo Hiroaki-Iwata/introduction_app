@@ -6,6 +6,7 @@ import { Timelines } from '../type/Timelines';
 export const timelineData: Timelines = {
   start: [
     {type: 'dialog',text:'どのシナリオをプレイしますか？▼'},
+    //{type:'soundPlay',key:'shock'},
     {type: 'timelineTransition', timelineID: 'choice_scenario'},//どこのタイムラインに飛ばすか
   ],
   choice_scenario: [//シナリオ選択
