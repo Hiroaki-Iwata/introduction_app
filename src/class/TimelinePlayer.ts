@@ -1,7 +1,7 @@
 import { Timeline } from '../type/Timeline';
 import { Choice } from '../type/Choice';
 import { DialogBox } from './DialogBox';
-import { Textures } from 'phaser';
+//import { Textures } from 'phaser';
 
 export class TimelinePlayer {
   private backgroundLayer: Phaser.GameObjects.Container;
@@ -59,9 +59,8 @@ export class TimelinePlayer {
   }
 
   private soundPlay(texture:string) {
-    const playsound = this.scene.sound.add(texture);
-    playsound.play();
-    this.next();
+    const playSound = this.scene.sound.add(texture);
+    playSound.play();
   }
 
   // 前景をクリア
@@ -185,11 +184,14 @@ export class TimelinePlayer {
         this.setChoiceButtons(timelineEvent.choices);
         break;
 
-      case 'soundPlay':
+      case 'soundPlay': //サウンド再生イベント
         this.soundPlay(timelineEvent.key);
+        this.next();
         break;
 
       default:
+        console.log('イベント選択ミス');
+        console.log('timelineplayerらへんを確認');
         break;
     }
   }

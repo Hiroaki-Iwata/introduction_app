@@ -81,6 +81,10 @@ export class LoadingScene extends Phaser.Scene {
       this.load.audio('shock','assets/audio/shock.mp3');
       this.load.audio('tin','assets/audio/tin.mp3');
       this.load.audio('ware','assets/audio/ware.mp3');
+      this.load.audio('sfc','assets/audio/sfc.mp3');
+      this.load.audio('pc','assets/audio/pc.mp3');
+      this.load.audio('mekuru','assets/audio/mekuru.mp3');
+      this.load.audio('write','assets/audio/write.mp3');
       //this.load.audio('','assets/audio/.mp3');
 
       // アセットのロードが完了したらTitleSceneに遷移
