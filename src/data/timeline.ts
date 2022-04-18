@@ -2,7 +2,6 @@ import { Timelines } from '../type/Timelines';
 
 //TODO:効果音・BGMの実装
 //TODO:高校生編の描写を丁寧に
-//TODO:自己紹介編追加する？
 //TODO クレジット
 
 export const timelineData: Timelines = {
