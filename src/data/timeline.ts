@@ -19,7 +19,7 @@ export const timelineData: Timelines = {
   intro:[
     {type:'dialog', text:'私は岩田大明（ひろあき）といいます。'},
     {type:'dialog', text:'北海道札幌出身で、大学時代から一人暮らししていました。'},
-    {type:'dialog', text:'趣味はゲームで、ゼル伝、スプラトゥーン、\nAPEXなどやってました。'},
+    {type:'dialog', text:'趣味はゲームで、ゼルダの伝説、スプラトゥーン、\nAPEXなどやってました。'},
     {type:'dialog', text:'基本的にはRPGが好きです。ロマサガ、MOTHER2、FFシリーズ、\nDQシリーズ、クロノトリガー、ペルソナシリーズ、\nスーパーマリオRPG、ポケモン、キングダムハーツ、\nダークソウル、ニーアなど・・・'},
     {type:'dialog', text:'古いゲームも新しいゲームも好きです。\n実家にあったスーファミを今住んでるところに持ってくるくらいにはスーファミ好きです。'},
     {type:'dialog', text:'これからご指導ご鞭撻のほど、よろしくお願いいたします。'},
@@ -196,7 +196,7 @@ export const timelineData: Timelines = {
     ],
   syo03_od:[
     {type: 'setBackground', x: 400, y: 300, key: 'glass'},
-    {type: 'dialog', text: '・・・が、真顔でボウリング球型コントローラーを\n外に持っていき、\n地面に叩きつけて破壊したらしい。▼'},
+    {type: 'dialog', text: '・・・が、父は真顔でボウリング球型コントローラーを\n外に持っていき、\n地面に叩きつけて破壊したらしい。▼'},
     {type: 'dialog', text: '-----ボウリングゲーム編 END-----'},
     {type: 'sceneTransition', key: 'ending'}
     ],
