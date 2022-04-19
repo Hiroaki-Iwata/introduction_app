@@ -1,11 +1,10 @@
 import { Timelines } from '../type/Timelines';
 
-//TODO:自己紹介の演出
+//TODO:スーファミ画像の用意
 
 export const timelineData: Timelines = {
   start: [
     {type: 'dialog',text:'どのシナリオをプレイしますか？▼'},
-    //{type:'soundPlay',key:'shock'},
     {type: 'timelineTransition', timelineID: 'choice_scenario'},//どこのタイムラインに飛ばすか
   ],
   choice_scenario: [//シナリオ選択
@@ -17,11 +16,26 @@ export const timelineData: Timelines = {
     ]}
   ],
   intro:[
+    {type: 'setBackground', x: 400, y: 300, key: 'ocha'},
     {type:'dialog', text:'私は岩田大明（ひろあき）といいます。'},
-    {type:'dialog', text:'北海道札幌出身で、大学時代から一人暮らししていました。'},
+    {type:'dialog', text:'北海道札幌出身で、青森の大学時代から一人暮らししていました。'},
+    {type: 'timelineTransition', timelineID: 'intro01'},
+  ],
+  intro01:[
+    {type: 'setBackground', x: 400, y: 300, key: 'brother'},
+    {type:'dialog', text:'男女女男の4人兄弟の末っ子で、超自由に育ってしまいました。'},
     {type:'dialog', text:'趣味はゲームで、ゼルダの伝説、スプラトゥーン、\nAPEXなどやってました。'},
     {type:'dialog', text:'基本的にはRPGが好きです。ロマサガ、MOTHER2、FFシリーズ、\nDQシリーズ、クロノトリガー、ペルソナシリーズ、\nスーパーマリオRPG、ポケモン、キングダムハーツ、\nダークソウル、ニーアなど・・・'},
-    {type:'dialog', text:'古いゲームも新しいゲームも好きです。\n実家にあったスーファミを今住んでるところに持ってくるくらいにはスーファミ好きです。'},
+    {type:'dialog', text:'古いゲームも新しいゲームも好きです。\n実家にあった兄のお下がりのスーファミを、\n今住んでるところに持ってくるくらいにはスーファミ好きです。'},
+    {type: 'timelineTransition', timelineID: 'intro02'},
+  ],
+  intro02:[
+    {type: 'setBackground', x: 400, y: 300, key: 'neko'},
+    {type:'dialog', text:'実家に猫がいて猫好きですが、猫アレルギーです。\n春も秋も花粉アレルギーが出て、ハウスダストアレルギーもあります。'},
+    {type: 'timelineTransition', timelineID: 'intro03'},
+  ],
+  intro03:[
+    {type: 'setBackground', x: 400, y: 300, key: 'pain'},
     {type:'dialog', text:'これからご指導ご鞭撻のほど、よろしくお願いいたします。'},
     {type: 'timelineTransition', timelineID: 'choice_scenario'},
     //{type: 'sceneTransition', key: 'ending'}

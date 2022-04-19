@@ -8,7 +8,7 @@ export class EndingScene extends Phaser.Scene {
 
     //this.add.image(width/2, height/2, 'logo');
     this.add.text(
-      width/2, height/2-100, 'おわり',{fontSize: '28px',}
+      width/2, height/2-120, 'おわり',{fontSize: '40px',}
     ).setOrigin(0.5).setPadding(4);
     this.add.text(
       width/2, height/2-50, '原作:岩田大明',{fontSize: '28px',}

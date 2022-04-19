@@ -43,6 +43,10 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('tv','assets/back/tv.jpg');
       this.load.image('tv_ware','assets/back/tv_ware.jpg');
       this.load.image('glass','assets/back/glass.jpg');
+      this.load.image('brother','assets/back/brother.jpg');
+      this.load.image('neko','assets/back/neko.jpg');
+      this.load.image('ocha','assets/back/ocha.jpg');
+      this.load.image('pain','assets/back/pain.jpg');
       //立ち絵
       this.load.image('atama','assets/stand/atama.png');
       this.load.image('boling','assets/stand/boling.png');
