@@ -16,8 +16,11 @@
 
 ## 開発環境
 Node.js
+
 TypeScript
+
 webpack
+
 Phaser3
 
 ## 製作について
