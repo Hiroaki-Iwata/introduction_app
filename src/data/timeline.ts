@@ -31,7 +31,7 @@ export const timelineData: Timelines = {
   ],
   intro02:[
     {type: 'setBackground', x: 400, y: 300, key: 'neko'},
-    {type:'dialog', text:'実家に猫がいて猫好きですが、猫アレルギーです。\n春も秋も花粉アレルギーが出て、ハウスダストアレルギーもあります。'},
+    {type:'dialog', text:'実家に猫がいて猫好きですが、猫アレルギーです。\n春も秋も花粉アレルギーが出て、\nハウスダストアレルギーもあります。\n（これは猫カフェの猫です）'},
     {type: 'timelineTransition', timelineID: 'intro03'},
   ],
   intro03:[
