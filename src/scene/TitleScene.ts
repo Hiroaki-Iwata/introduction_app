@@ -2,7 +2,7 @@ export class TitleScene extends Phaser.Scene {
     constructor() {
       super('title');
     }
-//TODO:黒歴史紹介という趣旨のタイトルつける
+
     create() {
       const { width, height } = this.game.canvas;
 
