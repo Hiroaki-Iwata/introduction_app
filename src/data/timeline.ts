@@ -674,6 +674,160 @@ export const timelineData: Timelines = {
     {type: 'dialog', text: '-----コーヒーカップ無限回転編　END-----'},
     {type: 'sceneTransition', key: 'ending'}
   ],
+  //こっからプレゼン用
+  pre01:[
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'pre01'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: ''},
+    {type: 'timelineTransition', timelineID: 'pre02'}
+  ],
+  pre02:[//何をするサイトか
+    {type: 'setBackground', x: 400, y: 300, key: 'pre02'},
+    {type: 'dialog', text: '自分の黒歴史みたいなものをゲーム形式で追体験してもらうことで、自分のことを知ってもらおう！という魂胆です。'},
+    {type: 'timelineTransition', timelineID: 'pre03'}
+  ],
+  pre03:[//遊び方
+    {type: 'setBackground', x: 400, y: 300, key: 'pre03'},
+    {type: 'dialog', text: '小学生・中学生・高校生編を選択できます。'},
+    {type: 'dialog', text: '基本的には過去の岩田が選択肢に直面するので、\n「自分ならこうするな」でも「岩田ならこうするな」でも良いので、\n選択してみてください。'},
+    {type: 'timelineTransition', timelineID: 'pre04'}
+  ],
+  pre04:[//開発環境
+  {type: 'setBackground', x: 400, y: 300, key: 'pre04'},
+  {type: 'dialog', text: ''},
+  {type: 'timelineTransition', timelineID: 'pre05'}
+  ],
+  pre05:[//開発環境説明
+  {type: 'setBackground', x: 400, y: 300, key: 'pre05'},
+  {type: 'dialog', text: '・実行環境 Node.js\nJavaScriptの実行環境です。'},
+  {type: 'dialog', text: '・言語 TypeScript\n静的型付け言語を使ってみたかったので使用しました。\nコード補完も強力でストレスフリーな気がします。'},
+  {type: 'dialog', text: '・モジュールバンドラー webpack\nJavaScriptモジュールを束ねることができるツールです。\nTypeScriptからJavaScriptにコンパイルするため使用。'},
+  {type: 'dialog', text: '・フレームワーク Phaser3\nHTML5ゲームを作成するために使用できる2Dゲームフレームワークです。\n使用することでコードがかなり短縮されます。\n日本語の文献がまだ少なく、英語のドキュメントを読むのに苦労しました。'},
+  {type: 'dialog', text: '・静的コード分析ツール ESLint\n構文をチェックして、ガイドラインに違反してたら指摘してくれたり、\n修正してくれたりする仕組みです。\nコードのチェックはあって損はないので導入しました。'},
+  {type: 'dialog', text: '・バージョン管理 GitHub\n以前、自分の製作物がOSのアップデートで動かなくなり、\n色々いじくり回した結果取り返しのつかないことになりました。\nそれ以来ちゃんとGitHubに上げたりバックアップするようになりました。'},
+  {type: 'timelineTransition', timelineID: 'pre06'}
+  ],
+  pre06:[//エピソード紹介
+  {type: 'setBackground', x: 400, y: 300, key: 'pre06'},
+  {type: 'dialog', text: ''},
+  {type: 'timelineTransition', timelineID: 'presyo01'}
+  ],
+  presyo01: [//小学生開始_ヒロインの名前編
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'mother'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '-----ヒロインの名前編-----'},
+    {type: 'dialog', text: 'MOTHER2やろうっと ▼',actorName: '小学生岩田'},
+    {type: 'dialog', text: '僕はMOTHER2のカセットに息を吹きかけて本体に挿し、\nスーパーファミコンを起動した。▼'},
+    {type: 'soundPlay', key: 'sfc'},
+    {type: 'dialog', text: 'ヒロインの名前かぁ▼',actorName: '小学生岩田'},
+    {type: 'timelineTransition', timelineID: 'prechoice_syo01'},
+  ],
+  prechoice_syo01: [//小学生：ヒロイン名前どうする
+    {type: 'setBackground', x: 400, y: 300, key: 'mother'},
+    {type: 'dialog', text: 'ヒロインの名前を自分で付けられるようだが、どうする？▼'},
+    {type: 'choice', choices: [
+      {text: 'デフォルトの名前をつける', timelineID: 'presyo01_x'},
+      {text: 'クラスの好きな子の名前をつける', timelineID: 'presyo01_o'},
+    ]}
+  ],
+  presyo01_x: [//不正解の場合選択肢に戻す
+    {type: 'setBackground', x: 400, y: 300, key: 'mother'},
+    {type: 'dialog', text: 'デフォルトにしようかな・・・▼', actorName: '小学生岩田'},
+    {type: 'dialog', text: 'いや、そんなの味気ないよな！考え直そう！▼', actorName: '小学生岩田'},
+    {type: 'timelineTransition', timelineID: 'prechoice_syo01'}
+  ],
+  presyo01_o: [//正解の場合は次のシーンへ
+    {type: 'setBackground', x: 400, y: 300, key: 'mother'},
+    {type: 'dialog', text: '好きな子の名前つけちゃおう！ヒロインだし。▼', actorName: '小学生岩田'},
+    {type: 'dialog', text: 'ゲームの中のヒロインは、自分に忠実に従ってくれた。▼'},
+    {type: 'dialog', text: 'しかも、終盤では超親密な関係になっている！▼'},
+    {type: 'dialog', text: '・・・・・▼'},
+    {type: 'dialog', text: 'しかし、僕は気づいてしまった。▼'},
+    {type: 'dialog', text: '現実の好きな子は、自分に見向きもしていなかったことを。▼'},
+    {type: 'soundPlay', key: 'shock'},
+    {type: 'dialog', text: 'ゲームと現実の差で虚しさがこみ上げてきた。▼'},
+    {type: 'dialog', text: '-----ヒロインの名前編 END-----'},
+    {type: 'timelineTransition', timelineID: 'prekou02'}
+  ],
+  prekou02: [//無限課金の章
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '-----課金倍プッシュ編-----'},
+    {type: 'dialog', text: '高校2年の授業中、\n隠れてスマホのゲームをしていた時だった。▼'},
+    {type: 'addForeground', x: 400, y: 300, key: 'deresute'},
+    {type: 'dialog', text: 'なんと、推しのキャラの新しい衣装がガチャに登場していた！▼'},
+    {type: 'dialog', text: 'うわ、前川○くのウエディング衣装じゃん！これは引きたい！▼',actorName:'高校生岩田'},
+    {type: 'timelineTransition', timelineID: 'prechoice_kou02'}
+  ],
+  prechoice_kou02:[
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'addForeground', x: 400, y: 300, key: 'think'},
+    {type: 'dialog', text: 'どうしよう？▼'},
+    {type: 'choice', choices: [
+      {text: '口座にあるバイト代を倍プッシュ', timelineID: 'prekou02_o'},
+      {text: '無償アイテムで引けなかったら諦める', timelineID: 'prekou02_x'},
+    ]}
+  ],
+  prekou02_x:[
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'dialog', text: '俺は、持っていたガチャアイテムをとりあえず\n全てガチャに注ぎ込んだ。▼'},
+    {type: 'addForeground', x: 400, y: 300, key: 'oteage'},
+    {type: 'soundPlay', key: 'shock'},
+    {type: 'dialog', text: 'しかし、お目当てのキャラが出ることはなかった。▼'},
+    {type: 'dialog', text: '無償のガチャアイテム全部使っちゃった・・・▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: 'しかもなにも出ないし・・・▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: 'もうこれは課金するしか！？▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: '諦めるつもりが、\nガチャを回すことで頭がいっぱいになってしまった。▼'},
+    {type: 'timelineTransition', timelineID: 'prekou02_o'}
+  ],
+  prekou02_o:[
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'fadeIn'},
+    {type: 'addForeground', x: 400, y: 300, key: 'atama'},
+    {type: 'dialog', text: '・・・・・▼'},
+    {type: 'dialog', text: 'もうこれで限界!3万!!!▼',actorName:'高校生岩田'},
+    {type: 'timelineTransition', timelineID: 'prekou02_oa'}
+  ],
+  prekou02_oa:[
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'addForeground', x: 400, y: 300, key: 'uwa'},
+    {type: 'dialog', text: '出なかった・・・・▼',actorName:'高校生岩田'},
+    {type: 'soundPlay', key: 'shock'},
+    {type: 'dialog', text: '結局推しが出なかったこと、\nそしてなけなしのバイト代3万が一瞬にして消えたことに\n俺は現実逃避をするしかなかった。▼'},
+    {type: 'timelineTransition', timelineID: 'prekou02_ob'}
+  ],
+  prekou02_ob:[
+    {type: 'fadeOut'},
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'fadeIn'},
+    {type: 'dialog', text: '-----授業後-----'},
+    {type: 'dialog', text: 'うなだれてる俺に、友人が声をかけてきた。▼'},
+    {type: 'addForeground', x: 400, y: 300, key: 'utsugi'},
+    {type: 'dialog', text: 'どした？そんなうなだれて。そんな凹む授業じゃないだろ。▼',actorName:'友人U'},
+    {type: 'timelineTransition', timelineID: 'prekou02_oc'}
+  ],
+  prekou02_oc:[
+    {type: 'setBackground', x: 400, y: 300, key: 'r_class'},
+    {type: 'addForeground', x: 400, y: 300, key: 'unadare'},
+    {type: 'dialog', text: '授業中課金して爆死したんだわ・・・▼',actorName:'高校生岩田'},
+    {type: 'dialog', text: '授業中３万溶かした男として、\nしばらく男子の中で話題になった・・・。▼'},
+    {type: 'dialog', text: '-----課金倍プッシュ編　END-----'},
+    {type: 'timelineTransition', timelineID: 'pre07'}
+  ],
+  pre07:[//最後に
+  {type: 'setBackground', x: 400, y: 300, key: 'pre07'},
+  {type: 'dialog', text: 'ーーー話しますーーー'},
+  {type: 'timelineTransition', timelineID: 'pre08'}
+  ],
+  pre08:[//エピソード紹介
+  {type: 'setBackground', x: 400, y: 300, key: 'pre08'},
+  {type: 'dialog', text: 'ーーー話しますーーー'},
+  {type: 'sceneTransition', key: 'ending'}
+  ],
 
 }
 
