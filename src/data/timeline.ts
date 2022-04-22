@@ -12,7 +12,8 @@ export const timelineData: Timelines = {
       {text: '自己紹介', timelineID: 'intro'},
       {text: '小学生の章', timelineID: 'syo01'},
       {text: '中学生の章', timelineID: 'chu01'},
-      {text: '高校生の章', timelineID: 'kou01'}
+      {text: '高校生の章', timelineID: 'kou01'},
+      {text: 'プレゼン用', timelineID: 'pre01'},
     ]}
   ],
   intro:[
