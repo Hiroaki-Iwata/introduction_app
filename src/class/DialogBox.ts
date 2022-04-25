@@ -31,7 +31,8 @@ export class DialogBox extends Phaser.GameObjects.Container {
     // wordWrap（折り返し設定）を追加した会話テキスト用のTextStyleを作成
     const dialogBoxTextStyle = {
       ...textStyle,
-      wordWrap: { width: width - padding*2, useAdvancedWrap: true }  // useAdvancedWrapをtrueにすることで日本語の折り返しが有効になる
+      wordWrap: { width: width - padding*2, useAdvancedWrap: true }
+      // useAdvancedWrapをtrueにすることで日本語の折り返しが有効になる
     };
 
     // 会話テキスト用のTextを作成
