@@ -7,6 +7,7 @@ export class LoadingScene extends Phaser.Scene {
     // preload()はシーンが呼び出されたら実行される
     preload() {
       this.load.image('title', 'assets/back/title.png');
+      
     }
 
     // create()はpreload内のアセットのロードが完了したら実行される

@@ -87,17 +87,17 @@ export class TimelinePlayer {
       const y = buttonGroupOriginY + buttonHeight * (index + 0.5) + buttonMargin * (index);
 
       // Rectangleでボタンを作成
-      const button = new Phaser.GameObjects.Rectangle(this.scene, width/2, y, width - buttonMargin*2, buttonHeight, 0x000000).setStrokeStyle(1, 0xffffff);
+      const button = new Phaser.GameObjects.Rectangle(this.scene, width/2, y, width - buttonMargin*2, buttonHeight, 0x000000,0.7).setStrokeStyle(1, 0xffffff);
       button.setInteractive({
         useHandCursor: true
       });
 
       // マウスオーバーで色が変わるように設定
       button.on('pointerover', () => {
-        button.setFillStyle(0x333333);
+        button.setFillStyle(0x333333,0.8);
       });
       button.on('pointerout', () => {
-        button.setFillStyle(0x000000);
+        button.setFillStyle(0x000000,0.8);
       });
 
       // ボタンクリックでシーンをリスタートし、指定のタイムラインを実行する
