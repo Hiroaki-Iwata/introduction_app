@@ -1,5 +1,3 @@
-//TODO メッセージ枠をおしゃれに
-
 export type DialogBoxConfig = {
   x: number,
   y: number,
