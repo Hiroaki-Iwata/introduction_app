@@ -1,7 +1,7 @@
 import { Timeline } from '../type/Timeline';
 import { Choice } from '../type/Choice';
 import { DialogBox } from './DialogBox';
-//import { Textures } from 'phaser';
+//import { Textures, *asPhaser } from 'phaser';
 
 export class TimelinePlayer {
   private backgroundLayer: Phaser.GameObjects.Container;
@@ -60,7 +60,7 @@ export class TimelinePlayer {
 
   private soundPlay(texture:string) {
     const playSound = this.scene.sound.add(texture);
-    playSound.play();
+    playSound.play({volume:0.5});
   }
 
   // 前景をクリア
