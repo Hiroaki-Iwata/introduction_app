@@ -37,6 +37,7 @@ export const timelineData: Timelines = {
   ],
   intro03:[
     {type: 'setBackground', x: 400, y: 300, key: 'pain'},
+    {type:'dialog', text:'業務では、特に上野さんがよく担当されている\nイベント系・体験系の案件を担当してみたいです。'},
     {type:'dialog', text:'これからご指導ご鞭撻のほど、よろしくお願いいたします。'},
     {type: 'timelineTransition', timelineID: 'choice_scenario'},
     //{type: 'sceneTransition', key: 'ending'}
@@ -685,13 +686,13 @@ export const timelineData: Timelines = {
   ],
   pre02:[//何をするサイトか
     {type: 'setBackground', x: 400, y: 300, key: 'pre02'},
-    {type: 'dialog', text: '自分の黒歴史みたいなものを\nゲーム形式で追体験してもらうことで、\n自分のことを知ってもらおう！という魂胆です。'},
+    {type: 'dialog', text: '僕の黒歴史みたいなものを\nゲーム形式で追体験してもらうことで、\n僕のことを知ってもらおう！という魂胆です。'},
     {type: 'timelineTransition', timelineID: 'pre03'}
   ],
   pre03:[//遊び方
     {type: 'setBackground', x: 400, y: 300, key: 'pre03'},
     {type: 'dialog', text: '小学生・中学生・高校生編を選択できます。'},
-    {type: 'dialog', text: '基本的には過去の岩田が選択肢に直面するので、\n「自分ならこうするな」でも「岩田ならこうするな」でも\n良いので、選択してみてください。'},
+    {type: 'dialog', text: '過去の岩田が選択肢に直面するので、\n「自分ならこうするな」でも「岩田ならこうするな」でも\n良いので、選択してみてください。'},
     {type: 'timelineTransition', timelineID: 'pre04'}
   ],
   pre04:[//開発環境
