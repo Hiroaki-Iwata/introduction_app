@@ -5,6 +5,25 @@
 
 岩田のことを知ってもらおう！という魂胆です。
 
+## 環境構築方法
+1.node.js/npmのインストールおよび作業ディレクトリの`npm init`の実行
+
+2.phaser、typescript、webpack系のパッケージをインストール
+
+`npm i phaser`
+
+`npm i -D typescript webpack webpack-cli webpack-dev-server ts-loader html-webpack-plugin copy-webpack-plugin`
+
+3.このリポジトリをクローン
+
+※macで開発したのでwindows環境の方はクローン後に上の2.を実行した方がいいかも
+
+## ローカルで遊ぶ方法
+`npx webpack-dev-server`でローカルで実行できます。
+
+## コンパイル方法
+`npx webpack`でコンパイルできます。
+
 ## 遊び方
 最初に自己紹介を見るか小学生・中学生・高校生編を選択できます。
 
