@@ -7,7 +7,7 @@ export class LoadingScene extends Phaser.Scene {
     // preload()はシーンが呼び出されたら実行される
     preload() {
       this.load.image('title', 'assets/back/title.png');
-      
+
     }
 
     // create()はpreload内のアセットのロードが完了したら実行される
@@ -45,7 +45,7 @@ export class LoadingScene extends Phaser.Scene {
       this.load.image('brother','assets/back/brother.jpg');
       this.load.image('neko','assets/back/neko.jpg');
       this.load.image('ocha','assets/back/ocha.jpg');
-      this.load.image('pain','assets/back/pain.jpg');
+      this.load.image('rei','assets/back/rei.jpg');
       this.load.image('pre01','assets/back/pre1.jpg');
       this.load.image('pre02','assets/back/pre2.jpg');
       this.load.image('pre03','assets/back/pre3.jpg');

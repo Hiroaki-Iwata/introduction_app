@@ -36,7 +36,7 @@ export const timelineData: Timelines = {
     {type: 'timelineTransition', timelineID: 'intro03'},
   ],
   intro03:[
-    {type: 'setBackground', x: 400, y: 300, key: 'pain'},
+    {type: 'setBackground', x: 400, y: 300, key: 'rei'},
     {type:'dialog', text:'業務では、特に上野さんがよく担当されている\nイベント系・体験系の案件を担当してみたいです。'},
     {type:'dialog', text:'これからご指導ご鞭撻のほど、よろしくお願いいたします。'},
     {type: 'timelineTransition', timelineID: 'choice_scenario'},
